@@ -15,11 +15,13 @@ get_header();
         color: #1b1c1c;
     }
     .market-dashboard-wrap .card {
-        background: #ffffff;
         border-radius: 8px;
         border: 1px solid rgba(195, 198, 207, 0.3);
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04);
         transition: transform 0.2s, border-color 0.2s;
+    }
+    .market-dashboard-wrap .card:not(.bg-primary):not(.bg-surface-container) {
+        background: #ffffff;
     }
     .market-dashboard-wrap .card:hover {
         transform: translateY(-2px);
