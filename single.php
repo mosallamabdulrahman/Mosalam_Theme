@@ -32,7 +32,7 @@ while ( have_posts() ) :
         <span class="text-white/70 uppercase tracking-widest"><?php echo esc_html( $categories[0]->name ); ?></span>
       </div>
 
-      <h1 class="text-3xl md:text-5xl font-headline font-bold text-white mb-6 leading-tight max-w-4xl"><?php the_title(); ?></h1>
+      <h1 class="text-3xl md:text-5xl font-headline font-bold text-white mb-6 !leading-tight max-w-4xl"><?php the_title(); ?></h1>
 
       <!-- Meta row -->
       <div class="flex flex-wrap items-center gap-6 text-sm text-white/75 mt-8">

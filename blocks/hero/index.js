@@ -46,7 +46,12 @@ registerBlockType(metadata.name, {
         <section {...blockProps}>
           <div className="flex-grow relative flex items-center w-full overflow-hidden">
             <div className="cinematic-bg absolute inset-0">
-              <img className="w-full h-full object-cover" alt="abstract high-tech digital background" src={backgroundImage} referrerPolicy="no-referrer" />
+              <img 
+                className="w-full h-full object-cover" 
+                alt="abstract high-tech digital background" 
+                src={backgroundImage || (window.mosalamThemeUrl ? window.mosalamThemeUrl + '/assets/images/abstract-high-tech-digital-background.webp' : '')} 
+                referrerPolicy="no-referrer" 
+              />
               <div className="absolute inset-0 bg-black/40"></div>
             </div>
             <div className="cinematic-content container-custom py-6 md:py-12">
