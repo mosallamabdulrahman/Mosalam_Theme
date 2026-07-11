@@ -58,14 +58,14 @@ registerBlockType(metadata.name, {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((category, catIndex) => (
-              <div key={catIndex} className="bg-white p-8 flex flex-col h-full border-t-4 border-secondary">
+              <div key={catIndex} className="bg-white p-8 flex flex-col border-t-4 border-secondary">
                 <RichText tagName="h3" className="text-h3 text-[#001b35] mb-4" value={category.title} onChange={(value) => updateCategory(catIndex, 'title', value)} allowedFormats={[]} />
                 <RichText tagName="p" className="text-body-sm text-on-surface-variant mb-8" value={category.description} onChange={(value) => updateCategory(catIndex, 'description', value)} allowedFormats={['core/bold', 'core/italic']} />
                 <div>
                   <h4 className="text-overline text-secondary mb-4">Specific Services</h4>
                   <div className="flex flex-col gap-2">
                     {category.links.map((link, linkIndex) => (
-                      <div key={linkIndex} className="flex items-center gap-2 p-3 rounded-action bg-[#fcf9f8]">
+                      <div key={linkIndex} className="flex items-center gap-2 p-3 bg-[#fcf9f8]">
                         <TextControl
                           value={link.label}
                           onChange={(value) => updateLink(catIndex, linkIndex, 'label', value)}
