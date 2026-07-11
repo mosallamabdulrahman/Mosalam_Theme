@@ -1,0 +1,44 @@
+.market-dashboard-wrap {
+    background-color: #fcf9f8;
+    color: #1b1c1c;
+}
+.market-dashboard-wrap .card {
+    border-radius: 8px;
+    border: 1px solid rgba(195, 198, 207, 0.3);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s, border-color 0.2s;
+}
+.market-dashboard-wrap .card:not(.bg-primary):not(.bg-surface-container) {
+    background: #ffffff;
+}
+.market-dashboard-wrap .card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(25, 74, 228, 0.3);
+}
+.market-dashboard-wrap .nav-btn.active {
+    background-color: #194ae4 !important;
+    color: #ffffff !important;
+    border-color: #194ae4 !important;
+}
+
+/* Chart Container Styling */
+.market-dashboard-wrap .chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 350px;
+    max-height: 400px;
+    margin: 0 auto;
+}
+@media (min-width: 1024px) {
+    .market-dashboard-wrap .chart-container { height: 400px; }
+}
+
+/* Custom Scrollbar for tables */
+.market-dashboard-wrap .custom-scroll::-webkit-scrollbar { width: 6px; height: 6px; }
+.market-dashboard-wrap .custom-scroll::-webkit-scrollbar-track { background: #f1f1f1; }
+.market-dashboard-wrap .custom-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+.market-dashboard-wrap .custom-scroll::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+.market-dashboard-wrap .highlight-box { border-left: 4px solid #194ae4; background-color: rgba(25, 74, 228, 0.04); }
+.market-dashboard-wrap .pain-point { border-left: 4px solid #ba1a1a; background-color: rgba(186, 26, 26, 0.04); }

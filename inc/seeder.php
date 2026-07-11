@@ -60,7 +60,7 @@ function mosalam_seed_blog_posts() {
                     mosalam_log_seed_error( "Failed to copy " . $theme_bg_path . " to " . $tmp_file );
                 } else {
                     $file_array = [
-                        'name'     => 'hosting_featured_image.png',
+                        'name'     => 'blog_hero_bg.webp',
                         'tmp_name' => $tmp_file,
                     ];
 

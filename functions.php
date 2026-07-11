@@ -57,5 +57,33 @@ function mosalam_enqueue_assets()
             true
         );
     }
+
+    if (is_page_template('templates/market-analysis-dashboard-template.php')) {
+        // Enqueue Chart.js CDN for performance
+        wp_enqueue_script(
+            'chart-js',
+            'https://cdn.jsdelivr.net/npm/chart.js',
+            [],
+            '4.4.0',
+            true
+        );
+
+        // Enqueue custom CSS for the dashboard
+        wp_enqueue_style(
+            'market-analysis-css',
+            MOSALAM_THEME_URI . '/assets/css/market-analysis.css',
+            [],
+            MOSALAM_THEME_VERSION
+        );
+
+        // Enqueue custom JS for the dashboard (depends on chart-js)
+        wp_enqueue_script(
+            'market-analysis-js',
+            MOSALAM_THEME_URI . '/assets/js/market-analysis.js',
+            ['chart-js'],
+            MOSALAM_THEME_VERSION,
+            true
+        );
+    }
 }
 add_action('wp_enqueue_scripts', 'mosalam_enqueue_assets');
