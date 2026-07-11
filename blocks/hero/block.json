@@ -28,7 +28,7 @@
     },
     "backgroundImage": {
       "type": "string",
-      "default": "https://lh3.googleusercontent.com/aida-public/AB6AXuBRp63IivcD50yw9GXOHOPZr01oH-_8GTJeizlWCxgAAT2QRxZ49CPUKdiGaHFrz_8p8pwphZhgtgq2dw4qf557Lda3Fs1lXOyeGLK8XlWa3Rh09CQUNeb95Wj-WWHPbC8gvX4BKajqnoBGSrL2ZxteMjEc8SOf9rByiV8bmwHRMZrqzwzwm6_EIYI-uYG95SL7h6USortMke-bPFWgERT-pLCTM61fjArPT96nFdq776f6RDWfkjQJ6DqtXCpR8Vd1mpFB96YW2aSY"
+      "default": "abstract-high-tech-digital-background.webp"
     },
     "scrollLabel": {
       "type": "string",

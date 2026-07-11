@@ -7,7 +7,7 @@ $title = $attributes['title'] ?? '';
 $description = $attributes['description'] ?? '';
 $cta_label = $attributes['ctaLabel'] ?? '';
 $background_image = $attributes['backgroundImage'] ?? '';
-if ( empty( $background_image ) ) {
+if ( empty( $background_image ) || $background_image === 'abstract-high-tech-digital-background.webp' ) {
     $background_image = MOSALAM_THEME_URI . '/assets/images/abstract-high-tech-digital-background.webp';
 }
 $scroll_label = $attributes['scrollLabel'] ?? '';

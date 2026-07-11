@@ -49,7 +49,7 @@ registerBlockType(metadata.name, {
               <img 
                 className="w-full h-full object-cover" 
                 alt="abstract high-tech digital background" 
-                src={backgroundImage || (window.mosalamThemeUrl ? window.mosalamThemeUrl + '/assets/images/abstract-high-tech-digital-background.webp' : '')} 
+                src={(!backgroundImage || backgroundImage === 'abstract-high-tech-digital-background.webp') ? (window.mosalamThemeUrl ? window.mosalamThemeUrl + '/assets/images/abstract-high-tech-digital-background.webp' : '') : backgroundImage} 
                 referrerPolicy="no-referrer" 
               />
               <div className="absolute inset-0 bg-black/40"></div>
