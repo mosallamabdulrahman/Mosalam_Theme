@@ -1,0 +1,61 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "mosalam/sectors",
+  "title": "Sector Expertise",
+  "category": "mosalam-blocks",
+  "icon": "smiley",
+  "description": "Four hover image tiles plus a sector-expertise text banner.",
+  "textdomain": "mosalam",
+  "editorScript": "file:./build/index.js",
+  "render": "file:./render.php",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "Sector Specific Depth"
+    },
+    "title": {
+      "type": "string",
+      "default": "Engineering for Impact"
+    },
+    "description": {
+      "type": "string",
+      "default": "Deep Sector Expertise that addresses the unique technical and regulatory requirements of your industry, from secure-by-design government mandates to low-latency financial systems."
+    },
+    "sectors": {
+      "type": "array",
+      "default": [
+        {
+          "title": "Public Sector",
+          "description": "CCS Framework compliance.",
+          "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBZZA1AJu_CBJ8NRndJrZmGai2s21cegM_218nsQdQVbcebTzP3TYz-q-hNk19zPQ3n5pWqEb734tjppVMktxaprfBWefGgH5sXYRATtm53XtUMYSVbILIW9m8c2Tq0XTBgsDiRHJ5BG7uEZQZHXqvzusSyYYg8XbY1Vk2zmlXD19jFHHmZ4wm8PFGXq7BA6DMnx5sD0BPPWwVZ5jLc1TgHW_tPEpzmRq-b_tvoKi5qIU9PrpaWzkRGgRhvwI1gheYmEky2l4ecxXsP"
+        },
+        {
+          "title": "Manufacturing",
+          "description": "Ruggedised IoT & Edge.",
+          "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCyHKN13uoTnvW8lw3xzlyKJWoWX1tKbspvAnHN8PnAmdcpy_Qu1xNyVZJ8rIp5geLurTqCw1KKfksgQYgayVAxr1EgNoztlRneBtXeAexQyEY7SHruuONTP1eYehfvH7-z_B57brC7722hds3eecDotLAItpE3cGth7lok3NderA9oGscThxc8Zabs8dSoEoKZ5ijWw2-0_AVtSD2HG4DVZdRcVYRzBXaPMDDKR2jDTaBbEVAFysq0oHsm0GEO915R2JGObHF4lyCZ"
+        },
+        {
+          "title": "Retail",
+          "description": "Behavior analytics.",
+          "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCnwuGlQnJNUQQkx6R9sOIrtles6oKn-3eVqNdhnJemwYm0vp4C5xr4HnmkE4Xvyj3CljPrpDgHEbKGzY4-R0d9soDf0qbTA1HiSuULbGjsLDD6Tia6UsbTEy_Y9Y4JiP7IS1-G0GruHcK0FKqclFNjSZXPBQSXxS4z86MSuVM-8nSKcUlvN_X7kVUytMSxJP24bTERhUFoWySDl1J4FiqL-zUqH6waxoRX5Xv6oPyKjtokp5wwwqTCEot8fYOXHh1P8hRdsXuTS18u"
+        },
+        {
+          "title": "Finance",
+          "description": "FCA compliance.",
+          "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuA_sgx4ApxCGlKJOu0WgYKYUQ6IenFecgxVArp3sRAO7wD2hQMXVNgTG-ESla94Vwg6qRR0mDQuS1vZXktGJHLKRBhS9qsR26XhO2VFevu93NJrQ-4dY50PWe-FkwRkOS9OblCo-35vekzq5t6xhGMyV85tfilrTwE8AspHVE_JBM06fMEa4Lc9bnJCCLkEXVNF0GljVFlW--Gsx6mKUNA5oFWt-jGH1GCaCHodiIbiQhgLp2XTkVDyBDcQw2eXkR2N23vFZgKPHopw"
+        }
+      ]
+    },
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  }
+}

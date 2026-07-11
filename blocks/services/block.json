@@ -1,0 +1,65 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "mosalam/services",
+  "title": "Our Services",
+  "category": "mosalam-blocks",
+  "icon": "smiley",
+  "description": "Service category cards, each with a list of specific sub-services.",
+  "textdomain": "mosalam",
+  "editorScript": "file:./build/index.js",
+  "render": "file:./render.php",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "Our Capabilities"
+    },
+    "title": {
+      "type": "string",
+      "default": "Our Services"
+    },
+    "categories": {
+      "type": "array",
+      "default": [
+        {
+          "title": "Data and AI",
+          "description": "Data, AI, and digital automation solutions that unify, analyze, and automate business processes across hybrid environments. Capabilities span data fabric integration, intelligent workflow automation, and AI-driven transformation to enhance efficiency and decision-making.",
+          "links": [
+            {
+              "label": "Data",
+              "url": "/data"
+            },
+            {
+              "label": "Artificial Intelligence",
+              "url": "/artificial-intelligence"
+            },
+            {
+              "label": "Digital Automation",
+              "url": "/digital-automation"
+            }
+          ]
+        },
+        {
+          "title": "Security",
+          "description": "Security and resilience – from see to solve. Zero trust, observability to automation, managed protection and response, and board-ready assurance help to keep resilience, compliance, and costs predictable.",
+          "links": [
+            {
+              "label": "Cyber Security",
+              "url": "/it-solutions/cyber-security"
+            }
+          ]
+        }
+      ]
+    },
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "mosalam/about-preview",
+  "title": "About Us (Home teaser)",
+  "category": "mosalam-blocks",
+  "icon": "smiley",
+  "description": "Homepage about-us teaser with stats and a photo.",
+  "textdomain": "mosalam",
+  "editorScript": "file:./build/index.js",
+  "render": "file:./render.php",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "Who We Are"
+    },
+    "title": {
+      "type": "string",
+      "default": "About Us"
+    },
+    "paragraph1": {
+      "type": "string",
+      "default": "We are a team of elite architects, engineers, and strategists dedicated to redefining the IT landscape. Our mission is to deliver digital foundations that empower people and organisations to achieve their potential through sustainable technology innovation."
+    },
+    "paragraph2": {
+      "type": "string",
+      "default": "With deep sector expertise and a commitment to excellence, we partner with our clients to navigate complex challenges, optimize operations, and unlock new opportunities for growth."
+    },
+    "image": {
+      "type": "string",
+      "default": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1000"
+    },
+    "stats": {
+      "type": "array",
+      "default": [
+        {
+          "value": "20+",
+          "label": "Years of Experience"
+        },
+        {
+          "value": "500+",
+          "label": "Successful Projects"
+        }
+      ]
+    },
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  }
+}

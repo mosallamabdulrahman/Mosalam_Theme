@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "mosalam/ai-foundations",
+  "title": "AI-Ready Foundations",
+  "category": "mosalam-blocks",
+  "icon": "smiley",
+  "description": "Dark full-bleed section highlighting AI infrastructure capabilities.",
+  "textdomain": "mosalam",
+  "editorScript": "file:./build/index.js",
+  "render": "file:./render.php",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "AI-Ready Foundations"
+    },
+    "title": {
+      "type": "string",
+      "default": "Scale AI beyond the sandbox"
+    },
+    "description": {
+      "type": "string",
+      "default": "Unlock enterprise-grade AI with infrastructure designed for performance. From GPU-dense nodes and high-throughput fabrics to production-ready MLOps."
+    },
+    "backgroundImage": {
+      "type": "string",
+      "default": "https://lh3.googleusercontent.com/aida-public/AB6AXuBhaw6NwSiFTkO6U4QYjWHAgQzLBrdVwn5wg9Jx6BQubEF-itBoW7gkhHLSF85mxjasPuICn5yj7j3Lr5Elx5lZ5g7xoaZByXISpVE9rVPqMdKaO491F5XGbGHoA3A0LO5knbqVLvy8ykAnuBMMaAjWVyQISAhmX1kbkp6L5N65JYoB2pa3nD1piEindQEINjMkdhJMB0EpdQT2982VKlfErCFpyILGbg_RCVsVmFFBQMm4E9sFNzM9ZOsf4r4jKgEh4sKfQrJJIFzL"
+    },
+    "features": {
+      "type": "array",
+      "default": [
+        {
+          "title": "GPU Density",
+          "description": "Specialised architectures for heavy LLM training and real-time inference."
+        },
+        {
+          "title": "High-Throughput",
+          "description": "Ultra-low latency data paths and interconnects for massive datasets."
+        },
+        {
+          "title": "Production MLOps",
+          "description": "Unified layers to govern, scale, and secure AI models across environments."
+        }
+      ]
+    },
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  }
+}

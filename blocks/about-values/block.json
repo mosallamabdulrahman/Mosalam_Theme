@@ -1,0 +1,62 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "mosalam/about-values",
+  "title": "About: Our Core Values",
+  "category": "mosalam-blocks",
+  "icon": "smiley",
+  "description": "Five icon tiles for the company's core values.",
+  "textdomain": "mosalam",
+  "editorScript": "file:./build/index.js",
+  "render": "file:./render.php",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "The DNA"
+    },
+    "title": {
+      "type": "string",
+      "default": "Our Core Values"
+    },
+    "values": {
+      "type": "array",
+      "default": [
+        {
+          "icon": "shield",
+          "title": "Responsibility",
+          "description": "Accountable for every packet sent and every promise made."
+        },
+        {
+          "icon": "heart",
+          "title": "Passion",
+          "description": "Driving innovation through genuine love for technical craftsmanship."
+        },
+        {
+          "icon": "users",
+          "title": "Customer First",
+          "description": "The final user's experience is our ultimate metric of success."
+        },
+        {
+          "icon": "zap",
+          "title": "Agility",
+          "description": "Fluid structures that allow for rapid pivots in a changing world."
+        },
+        {
+          "icon": "home",
+          "title": "Family",
+          "description": "A 20-year legacy of kinship and stability in corporate culture."
+        }
+      ]
+    },
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  }
+}

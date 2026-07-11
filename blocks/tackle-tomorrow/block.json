@@ -1,0 +1,48 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "mosalam/tackle-tomorrow",
+  "title": "Tackle Tomorrow",
+  "category": "mosalam-blocks",
+  "icon": "smiley",
+  "description": "Closing CTA banner with three highlight cards.",
+  "textdomain": "mosalam",
+  "editorScript": "file:./build/index.js",
+  "render": "file:./render.php",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Tackle tomorrow"
+    },
+    "cards": {
+      "type": "array",
+      "default": [
+        {
+          "title": "The Mosalam Advantage",
+          "description": "Proprietary framework for accelerated digital ROI and risk mitigation.",
+          "ctaLabel": "Explore"
+        },
+        {
+          "title": "Mosalam Consultancy",
+          "description": "Advisory services for CXOs navigating ESG, FinOps, and digital horizons.",
+          "ctaLabel": "Explore"
+        },
+        {
+          "title": "Join the Architects",
+          "description": "Join a team of elite architects redefining the IT landscape innovation.",
+          "ctaLabel": "Explore"
+        }
+      ]
+    },
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  }
+}

@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 90%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: theme("fontFamily.headline");
+  background-color: theme("colors.surface");
+  color: theme("colors.on-surface");
+}
+
+.glass-nav {
+  backdrop-filter: blur(20px);
+}
+
+.cinematic-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cinematic-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.cinematic-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+.text-overlay {
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 27, 53, 0.85) 50%,
+    rgba(0, 27, 53, 0.95)
+  );
+}
+
+/* Design System: Typography */
+@layer components {
+  .text-hero {
+    @apply text-5xl md:text-7xl lg:text-9xl font-bold leading-[1.05] tracking-tight;
+  }
+  .text-h1 {
+    @apply text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight;
+  }
+  .text-h2 {
+    @apply text-3xl md:text-5xl font-bold leading-tight tracking-tight;
+  }
+  .text-h3 {
+    @apply text-2xl md:text-3xl font-bold leading-snug;
+  }
+  .text-h4 {
+    @apply text-xl font-bold leading-snug;
+  }
+  .text-body-lg {
+    @apply text-lg md:text-xl lg:text-2xl font-body leading-relaxed;
+  }
+  .text-body {
+    @apply text-base md:text-lg font-body leading-relaxed;
+  }
+  .text-body-sm {
+    @apply text-sm font-body leading-relaxed;
+  }
+  .text-overline {
+    @apply text-xs font-bold uppercase tracking-[0.2em];
+  }
+  .text-overline-lg {
+    @apply text-sm font-bold uppercase tracking-[0.3em];
+  }
+
+  /* Design System: Spacing & Sizing */
+  .container-custom {
+    @apply max-w-[1920px] mx-auto px-6 md:px-12 lg:px-32;
+  }
+  .section-padding {
+    @apply py-20 md:py-32;
+  }
+  .gap-section {
+    @apply gap-16 md:gap-24;
+  }
+  .gap-element {
+    @apply gap-6 md:gap-8;
+  }
+  .pad-element {
+    @apply p-8 md:p-12 lg:p-24;
+  }
+
+  /* ── Blog: Post prose typography ──────────── */
+  .prose-mosalam {
+    @apply text-base md:text-lg font-body leading-relaxed text-on-surface;
+  }
+  .prose-mosalam h2 {
+    @apply text-2xl md:text-3xl font-headline font-bold leading-snug text-primary mt-12 mb-4 scroll-mt-36;
+  }
+  .prose-mosalam h3 {
+    @apply text-xl md:text-2xl font-headline font-bold leading-snug text-primary mt-10 mb-3 scroll-mt-36;
+  }
+  .prose-mosalam h4 {
+    @apply text-lg font-headline font-bold text-primary mt-8 mb-2;
+  }
+  .prose-mosalam p {
+    @apply mb-6 text-on-surface/85;
+  }
+  .prose-mosalam a {
+    @apply text-secondary underline underline-offset-4 decoration-secondary/30 hover:decoration-secondary transition-colors;
+  }
+  .prose-mosalam strong {
+    @apply font-bold text-on-surface;
+  }
+  .prose-mosalam em {
+    @apply italic;
+  }
+  .prose-mosalam ul,
+  .prose-mosalam ol {
+    @apply mb-6 pl-6 space-y-2 text-on-surface/85;
+  }
+  .prose-mosalam ul {
+    @apply list-disc;
+  }
+  .prose-mosalam ol {
+    @apply list-decimal;
+  }
+  .prose-mosalam li {
+    @apply leading-relaxed;
+  }
+  .prose-mosalam blockquote {
+    @apply border-l-4 border-secondary/40 pl-6 py-2 my-8 italic text-on-surface-variant bg-surface-container/50 rounded-r-action;
+  }
+  .prose-mosalam img {
+    @apply rounded-action my-8 w-full h-auto;
+  }
+  .prose-mosalam figure {
+    @apply my-8;
+  }
+  .prose-mosalam figcaption {
+    @apply text-sm text-on-surface-variant text-center mt-3;
+  }
+  .prose-mosalam pre {
+    @apply bg-primary text-white rounded-action p-6 my-8 overflow-x-auto text-sm leading-relaxed;
+  }
+  .prose-mosalam code {
+    @apply bg-surface-container text-secondary px-1.5 py-0.5 rounded text-sm font-mono;
+  }
+  .prose-mosalam pre code {
+    @apply bg-transparent text-white p-0;
+  }
+  .prose-mosalam table {
+    @apply w-full text-sm my-8 border-collapse;
+  }
+  .prose-mosalam thead {
+    @apply bg-surface-container;
+  }
+  .prose-mosalam th {
+    @apply text-left p-3 font-bold text-primary border-b border-outline-variant;
+  }
+  .prose-mosalam td {
+    @apply p-3 border-b border-outline-variant/50;
+  }
+  .prose-mosalam hr {
+    @apply my-12 border-outline-variant/30;
+  }
+
+  /* ── Blog: Sidebar widget card ───────────── */
+  .blog-widget {
+    @apply bg-white rounded-action border border-outline-variant/30 p-6 shadow-sm;
+  }
+  .blog-widget-title {
+    @apply text-xs font-bold uppercase tracking-[0.2em] text-secondary mb-5 pb-3 border-b border-outline-variant/30;
+  }
+
+  /* ── Blog: Page-load fade-in transition ───── */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 20px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  .animate-fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Framer Motion scroll reveals (assets/js/theme.js initScrollReveal): hidden
+   until JS reveals them on first viewport entry. No `.js` class (JS failed
+   to load) or prefers-reduced-motion both fall back to fully visible. */
+html.js [data-animate],
+html.js [data-animate-group] [data-animate-item] {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+html.js [data-animate="fade-up"],
+html.js [data-animate-group="fade-up"] [data-animate-item] {
+  transform: translate3d(0, 40px, 0);
+}
+
+html.js [data-animate="fade-down"],
+html.js [data-animate-group="fade-down"] [data-animate-item] {
+  transform: translate3d(0, -40px, 0);
+}
+
+html.js [data-animate="fade-left"],
+html.js [data-animate-group="fade-left"] [data-animate-item] {
+  transform: translate3d(40px, 0, 0);
+}
+
+html.js [data-animate="fade-right"],
+html.js [data-animate-group="fade-right"] [data-animate-item] {
+  transform: translate3d(-40px, 0, 0);
+}
+
+html.js [data-animate="zoom-in"],
+html.js [data-animate-group="zoom-in"] [data-animate-item] {
+  transform: scale(0.92);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.js [data-animate],
+  html.js [data-animate-group] [data-animate-item] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

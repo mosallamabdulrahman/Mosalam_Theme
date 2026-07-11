@@ -1,0 +1,136 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "mosalam/contact-form",
+  "title": "Contact: Info & Form",
+  "category": "mosalam-blocks",
+  "icon": "smiley",
+  "description": "Contact info column plus the inquiry form.",
+  "textdomain": "mosalam",
+  "editorScript": "file:./build/index.js",
+  "render": "file:./render.php",
+  "attributes": {
+    "titleLine1": {
+      "type": "string",
+      "default": "Let's build"
+    },
+    "titleLine2": {
+      "type": "string",
+      "default": "the future."
+    },
+    "description": {
+      "type": "string",
+      "default": "Select your region or reach out directly to our global headquarters. Our specialists aim to respond to all strategic inquiries within 24 hours."
+    },
+    "contactItems": {
+      "type": "array",
+      "default": [
+        {
+          "icon": "mail",
+          "title": "Email Us",
+          "note": "",
+          "lines": [
+            {
+              "text": "info@mosalam.com",
+              "href": "mailto:info@mosalam.com"
+            },
+            {
+              "text": "support@mosalam.com",
+              "href": "mailto:support@mosalam.com"
+            }
+          ]
+        },
+        {
+          "icon": "phone",
+          "title": "Call Us",
+          "note": "Available Monday – Friday, 9 AM – 6 PM EST",
+          "lines": [
+            {
+              "text": "Primary: +447310082737",
+              "href": ""
+            },
+            {
+              "text": "Secondary: +201007669160",
+              "href": ""
+            }
+          ]
+        },
+        {
+          "icon": "globe",
+          "title": "Media & Press",
+          "note": "",
+          "lines": [
+            {
+              "text": "media@mosalam.com",
+              "href": "mailto:media@mosalam.com"
+            }
+          ]
+        }
+      ]
+    },
+    "formTitle": {
+      "type": "string",
+      "default": "Send a Message"
+    },
+    "nameLabel": {
+      "type": "string",
+      "default": "Full Name"
+    },
+    "namePlaceholder": {
+      "type": "string",
+      "default": "Enter your name"
+    },
+    "emailLabel": {
+      "type": "string",
+      "default": "Work Email"
+    },
+    "emailPlaceholder": {
+      "type": "string",
+      "default": "address@company.com"
+    },
+    "orgLabel": {
+      "type": "string",
+      "default": "Organization"
+    },
+    "orgPlaceholder": {
+      "type": "string",
+      "default": "Your company name"
+    },
+    "inquiryLabel": {
+      "type": "string",
+      "default": "Nature of Inquiry"
+    },
+    "inquiryOptions": {
+      "type": "array",
+      "default": [
+        "Digital Transformation Strategy",
+        "Cloud & Infrastructure",
+        "Cybersecurity Solutions",
+        "AI & Data Analytics",
+        "Other Services"
+      ]
+    },
+    "messageLabel": {
+      "type": "string",
+      "default": "Message"
+    },
+    "messagePlaceholder": {
+      "type": "string",
+      "default": "How can we help curate your digital future?"
+    },
+    "submitLabel": {
+      "type": "string",
+      "default": "Submit Inquiry"
+    },
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "mosalam/about-global-footprint",
+  "title": "About: Global Footprint",
+  "category": "mosalam-blocks",
+  "icon": "smiley",
+  "description": "Global offices list with a stylized map/office overlay card.",
+  "textdomain": "mosalam",
+  "editorScript": "file:./build/index.js",
+  "render": "file:./render.php",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "Global Reach"
+    },
+    "title": {
+      "type": "string",
+      "default": "Our Global Footprint"
+    },
+    "offices": {
+      "type": "array",
+      "default": [
+        {
+          "label": "Middle East Office",
+          "text": "10th floor, 24 Tayaran St,\nNaser City, Cairo"
+        },
+        {
+          "label": "European Office",
+          "text": "4th Floor, Silverstream House 45 Fitzroy Street,\nFitzrovia London"
+        },
+        {
+          "label": "Direct Inquiries",
+          "text": "+44 731 008 2737"
+        }
+      ]
+    },
+    "mapImage": {
+      "type": "string",
+      "default": "https://lh3.googleusercontent.com/aida-public/AB6AXuBhaw6NwSiFTkO6U4QYjWHAgQzLBrdVwn5wg9Jx6BQubEF-itBoW7gkhHLSF85mxjasPuICn5yj7j3Lr5Elx5lZ5g7xoaZByXISpVE9rVPqMdKaO491F5XGbGHoA3A0LO5knbqVLvy8ykAnuBMMaAjWVyQISAhmX1kbkp6L5N65JYoB2pa3nD1piEindQEINjMkdhJMB0EpdQT2982VKlfErCFpyILGbg_RCVsVmFFBQMm4E9sFNzM9ZOsf4r4jKgEh4sKfQrJJIFzL"
+    },
+    "overlayLabel": {
+      "type": "string",
+      "default": "London Office"
+    },
+    "overlayAddress": {
+      "type": "string",
+      "default": "4th Floor, Silverstream House 45 Fitzroy Street,\nFitzrovia London"
+    },
+    "overlayPhoneLabel": {
+      "type": "string",
+      "default": "Telephone"
+    },
+    "overlayPhone": {
+      "type": "string",
+      "default": "+44 731 008 2737"
+    },
+    "badgeText": {
+      "type": "string",
+      "default": "12+ Global Offices"
+    },
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  }
+}

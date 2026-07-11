@@ -1,0 +1,42 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "mosalam/clients",
+  "title": "Our Clients",
+  "category": "mosalam-blocks",
+  "icon": "smiley",
+  "description": "Trusted-by client logotype wall.",
+  "textdomain": "mosalam",
+  "editorScript": "file:./build/index.js",
+  "render": "file:./render.php",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "Trusted By"
+    },
+    "title": {
+      "type": "string",
+      "default": "Our Clients"
+    },
+    "clients": {
+      "type": "array",
+      "default": [
+        "ACME CORP",
+        "GLOBAL TECH",
+        "NEXUS",
+        "ELEVATE",
+        "SYNERGY"
+      ]
+    },
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  }
+}

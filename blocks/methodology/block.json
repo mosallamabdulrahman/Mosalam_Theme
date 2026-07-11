@@ -1,0 +1,77 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "mosalam/methodology",
+  "title": "Our Methodology",
+  "category": "mosalam-blocks",
+  "icon": "smiley",
+  "description": "Draggable tabbed methodology steps (Discover, Design, Supply, Implement, Manage, Optimise).",
+  "textdomain": "mosalam",
+  "editorScript": "file:./build/index.js",
+  "render": "file:./render.php",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "How we work"
+    },
+    "title": {
+      "type": "string",
+      "default": "Our Methodology"
+    },
+    "description": {
+      "type": "string",
+      "default": "Our methodology is built to give you strategic support, stakeholder buy-in and comprehensive risk management from first step to finish."
+    },
+    "steps": {
+      "type": "array",
+      "default": [
+        {
+          "number": "01",
+          "title": "Discover",
+          "description": "Get a thorough read on your current IT landscape, business requirements and future objectives. Know exactly where you are and what needs to happen next.",
+          "image": "discover.webp"
+        },
+        {
+          "number": "02",
+          "title": "Design",
+          "description": "Receive a tailored architecture that bridges your existing technology to your operational vision. Integration that respects legacy systems and constraints.",
+          "image": "design.webp"
+        },
+        {
+          "number": "03",
+          "title": "Supply",
+          "description": "Secure the right technology, software and hardware through extensive vendor partnerships and proven supply chain expertise.",
+          "image": "supply.webp"
+        },
+        {
+          "number": "04",
+          "title": "Implement",
+          "description": "Deploy and integrate new solutions with disciplined project management. On-time and on-budget delivery with minimal disruption.",
+          "image": "smiling.webp"
+        },
+        {
+          "number": "05",
+          "title": "Manage",
+          "description": "Rely on ongoing support from an award-winning 24/7 service desk and managed services. Technology that runs smoothly and efficiently.",
+          "image": "manage.webp"
+        },
+        {
+          "number": "06",
+          "title": "Optimise",
+          "description": "Continuous monitoring, assessment and enhancement of your IT estate. Expect higher performance, lower costs and stronger returns on technology investment.",
+          "image": "optimise.webp"
+        }
+      ]
+    },
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "mosalam/about-stats",
+  "title": "About: Scale & Results",
+  "category": "mosalam-blocks",
+  "icon": "smiley",
+  "description": "Bento-grid of six scale/impact stat tiles.",
+  "textdomain": "mosalam",
+  "editorScript": "file:./build/index.js",
+  "render": "file:./render.php",
+  "attributes": {
+    "items": {
+      "type": "array",
+      "default": [
+        {
+          "label": "Group Identity",
+          "value": "Mosalam",
+          "sublabel": "Parent Group",
+          "highlight": false
+        },
+        {
+          "label": "Operation",
+          "value": "20+ Yrs",
+          "sublabel": "Global Experience",
+          "highlight": false
+        },
+        {
+          "label": "Impact",
+          "value": "500+",
+          "sublabel": "Projects Delivered",
+          "highlight": true
+        },
+        {
+          "label": "Presence",
+          "value": "12+",
+          "sublabel": "Global Offices",
+          "highlight": false
+        },
+        {
+          "label": "Standard",
+          "value": "18",
+          "sublabel": "Accreditations",
+          "highlight": false
+        },
+        {
+          "label": "Ecosystem",
+          "value": "150+",
+          "sublabel": "Partnerships",
+          "highlight": false
+        }
+      ]
+    },
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "mosalam/about-mission-vision",
+  "title": "About: Mission, Vision & Ambition",
+  "category": "mosalam-blocks",
+  "icon": "smiley",
+  "description": "Three overlapping cards for Mission, Vision and Ambition.",
+  "textdomain": "mosalam",
+  "editorScript": "file:./build/index.js",
+  "render": "file:./render.php",
+  "attributes": {
+    "cards": {
+      "type": "array",
+      "default": [
+        {
+          "number": "01",
+          "title": "Mission",
+          "description": "To bridge the gap between complex digital architectures and simple, high-performance business outcomes for every client.",
+          "dark": false
+        },
+        {
+          "number": "02",
+          "title": "Vision",
+          "description": "To become the global standard for digital curation—where technology and human heritage coalesce to create an innovative future.",
+          "dark": true
+        },
+        {
+          "number": "03",
+          "title": "Ambition",
+          "description": "Double our social impact while halving our carbon footprint by 2030, proving that digital growth can be sustainable.",
+          "dark": false
+        }
+      ]
+    },
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  }
+}

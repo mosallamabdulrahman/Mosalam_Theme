@@ -1,0 +1,48 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "mosalam/hero",
+  "title": "Home Hero",
+  "category": "mosalam-blocks",
+  "icon": "smiley",
+  "description": "Cinematic full-width homepage hero with background image and CTA.",
+  "textdomain": "mosalam",
+  "editorScript": "file:./build/index.js",
+  "render": "file:./render.php",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "Empowering Progress"
+    },
+    "title": {
+      "type": "string",
+      "default": "Transforming the way we work"
+    },
+    "description": {
+      "type": "string",
+      "default": "We deliver the digital foundations that empower people and organisations to achieve their potential through sustainable technology innovation."
+    },
+    "ctaLabel": {
+      "type": "string",
+      "default": "Speak to a specialist"
+    },
+    "backgroundImage": {
+      "type": "string",
+      "default": "https://lh3.googleusercontent.com/aida-public/AB6AXuBRp63IivcD50yw9GXOHOPZr01oH-_8GTJeizlWCxgAAT2QRxZ49CPUKdiGaHFrz_8p8pwphZhgtgq2dw4qf557Lda3Fs1lXOyeGLK8XlWa3Rh09CQUNeb95Wj-WWHPbC8gvX4BKajqnoBGSrL2ZxteMjEc8SOf9rByiV8bmwHRMZrqzwzwm6_EIYI-uYG95SL7h6USortMke-bPFWgERT-pLCTM61fjArPT96nFdq776f6RDWfkjQJ6DqtXCpR8Vd1mpFB96YW2aSY"
+    },
+    "scrollLabel": {
+      "type": "string",
+      "default": "Scroll Narrative"
+    },
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+node_modules/
+blocks/*/build/
+assets/js/build/
+assets/css/tailwind.css
+npm-debug.log*

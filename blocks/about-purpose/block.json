@@ -1,0 +1,52 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "mosalam/about-purpose",
+  "title": "About: Our Purpose",
+  "category": "mosalam-blocks",
+  "icon": "smiley",
+  "description": "Two column purpose statement with a MOSALAM acronym badge.",
+  "textdomain": "mosalam",
+  "editorScript": "file:./build/index.js",
+  "render": "file:./render.php",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "Our Identity"
+    },
+    "titleLine1": {
+      "type": "string",
+      "default": "Our purpose:"
+    },
+    "titleLine2": {
+      "type": "string",
+      "default": "To simplify the complex."
+    },
+    "badgeLabel": {
+      "type": "string",
+      "default": "MOSALAM:"
+    },
+    "badgeText": {
+      "type": "string",
+      "default": "Operations Management Systems And Logistics Asset Management"
+    },
+    "paragraphs": {
+      "type": "array",
+      "default": [
+        "With a 20+ year heritage rooted in excellence, Mosalam stands as a trusted partner for the world’s most ambitious organizations. We navigate the intricate landscape of digital transformation so our clients don’t have to.",
+        "Our identity is defined by our name—a commitment to the seamless integration of Operations Management Systems and Logistics Asset Management. We don't just provide services; we architect the operational backbone of modern industry.",
+        "Our role transcends traditional IT consulting; we are the curators of your digital future, ensuring every technological investment translates into measurable human and business value."
+      ]
+    },
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  }
+}

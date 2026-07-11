@@ -1,0 +1,84 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "mosalam/about-team",
+  "title": "About: Meet Our Team",
+  "category": "mosalam-blocks",
+  "icon": "smiley",
+  "description": "Team member grid with photo, name and role.",
+  "textdomain": "mosalam",
+  "editorScript": "file:./build/index.js",
+  "render": "file:./render.php",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "Curating Excellence"
+    },
+    "title": {
+      "type": "string",
+      "default": "Meet Our Team"
+    },
+    "members": {
+      "type": "array",
+      "default": [
+        {
+          "name": "Mahmoud Mosalam",
+          "role": "Infrastructure Engineer",
+          "image": "assets/images/team/MahmoudMosalam.jpg"
+        },
+        {
+          "name": "Mostafa Samy",
+          "role": "Software Engineer",
+          "image": "assets/images/team/MostafaSamy.jpg"
+        },
+        {
+          "name": "Ahmed Maher",
+          "role": "DevOps Engineer",
+          "image": "assets/images/team/AhmedMaher.jpg"
+        },
+        {
+          "name": "Abdalaziz Mohammed",
+          "role": "Software Engineer – Front-end specialist",
+          "image": "assets/images/team/AbdalazizMohammed.jpg"
+        },
+        {
+          "name": "Mohamed Ali",
+          "role": "Executive Secretary",
+          "image": "assets/images/team/MohamedAli.jpg"
+        },
+        {
+          "name": "Abdulrahman Rafat",
+          "role": "Front-End Developer",
+          "image": "assets/images/team/AbdulrahmanRafat.jpg"
+        },
+        {
+          "name": "Mohamed Hashem",
+          "role": "System Administrator",
+          "image": "assets/images/team/MohamedHashem.jpg"
+        },
+        {
+          "name": "Ahmed Rafat",
+          "role": "IT Support",
+          "image": "assets/images/team/AhmedRafat.jpg"
+        },
+        {
+          "name": "Eslam Rashad Shaban",
+          "role": "Marketing Consultant",
+          "image": "assets/images/team/EslamRashadShaban.jpg"
+        },
+        {
+          "name": "Mohamed Elhamaky Samra",
+          "role": "Infrastructure Engineer",
+          "image": "assets/images/team/MohamedElhamaky.jpg"
+        }
+      ]
+    },
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+  "supports": {
+    "align": ["wide", "full"]
+  }
+}

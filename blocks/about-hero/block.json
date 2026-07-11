@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "mosalam/about-hero",
+  "title": "About Hero",
+  "category": "mosalam-blocks",
+  "icon": "smiley",
+  "description": "About Us page hero banner.",
+  "textdomain": "mosalam",
+  "editorScript": "file:./build/index.js",
+  "render": "file:./render.php",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "Our Heritage"
+    },
+    "titleLine1": {
+      "type": "string",
+      "default": "ABOUT MOSALAM"
+    },
+    "titleLine2": {
+      "type": "string",
+      "default": "Operations Management Systems And Logistics Asset Management"
+    },
+    "description": {
+      "type": "string",
+      "default": "We empower global enterprises to succeed through technology, bridging human heritage with the vanguard of digital innovation to deliver lasting outcomes."
+    },
+    "backgroundImage": {
+      "type": "string",
+      "default": "https://lh3.googleusercontent.com/aida-public/AB6AXuBVfLwJgnaiug0PFtQsi8rToQuWwN8fsLrfdJA93PnyC9ISb89A78eMq66cUYVxaly6FDXFyH7Zrg4BcfoyBc-yw2YtIPSGIxhrAJtiTuHuvtmYOUdbtKkV6JtxsoTrV0dPse2ETtjLdrSuYp31CpkBn4YtiTEqa23BFhHLB8_qhcGBin0D7XubuTb1p-jznWhUr7J4TF1vSAjoucSP2qSRq8nZRMt4xnixASNUeTVnoRV3wjpcJOh267idkIyPvLEm7AKJQZe0L508"
+    },
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  }
+}

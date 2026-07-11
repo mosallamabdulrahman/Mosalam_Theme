@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "mosalam/contact-offices",
+  "title": "Contact: Regional Offices",
+  "category": "mosalam-blocks",
+  "icon": "smiley",
+  "description": "London/Cairo regional office cards.",
+  "textdomain": "mosalam",
+  "editorScript": "file:./build/index.js",
+  "render": "file:./render.php",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "Our Locations"
+    },
+    "title": {
+      "type": "string",
+      "default": "Global Offices"
+    },
+    "offices": {
+      "type": "array",
+      "default": [
+        {
+          "label": "European Office",
+          "city": "London",
+          "address": "4th Floor,\nSilverstream House 45 Fitzroy Street,\nFitzrovia London",
+          "phone": "+44 731 008 2737"
+        },
+        {
+          "label": "Middle East Office",
+          "city": "Cairo",
+          "address": "10th floor,\n24 Tayaran St, Naser City,\nCairo",
+          "phone": "+20 10 076 69160"
+        }
+      ]
+    },
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  }
+}

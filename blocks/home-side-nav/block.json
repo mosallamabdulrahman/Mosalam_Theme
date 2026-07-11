@@ -1,0 +1,69 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "mosalam/home-side-nav",
+  "title": "Home Sticky Side Nav",
+  "category": "mosalam-blocks",
+  "icon": "smiley",
+  "description": "Fixed left-side section navigation dots for the home page (desktop only). Place once, anywhere on the Home page.",
+  "textdomain": "mosalam",
+  "editorScript": "file:./build/index.js",
+  "render": "file:./render.php",
+  "attributes": {
+    "items": {
+      "type": "array",
+      "default": [
+        {
+          "target": "hero",
+          "label": "Home",
+          "tone": "dark"
+        },
+        {
+          "target": "clients",
+          "label": "Our Clients",
+          "tone": "light"
+        },
+        {
+          "target": "methodology",
+          "label": "How we work",
+          "tone": "light"
+        },
+        {
+          "target": "ai",
+          "label": "Unlock the power of AI",
+          "tone": "dark"
+        },
+        {
+          "target": "services",
+          "label": "Our Services",
+          "tone": "dark"
+        },
+        {
+          "target": "sectors",
+          "label": "Sector Expertise",
+          "tone": "mixed"
+        },
+        {
+          "target": "about",
+          "label": "About Us",
+          "tone": "light"
+        },
+        {
+          "target": "tackle",
+          "label": "Tackle Tomorrow",
+          "tone": "dark"
+        }
+      ]
+    },
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  }
+}
