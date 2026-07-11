@@ -53,7 +53,7 @@ if ( empty( $archive_title ) ) {
     if ( $blog_query->have_posts() ) :
     ?>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 animate-fade-in-up">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 animate-fade-in-up">
         <?php while ( $blog_query->have_posts() ) : $blog_query->the_post(); ?>
 
           <article <?php post_class( 'group flex flex-col bg-white rounded-action border border-outline-variant/20 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1' ); ?>>

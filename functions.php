@@ -35,6 +35,18 @@ function mosalam_setup()
 add_action('after_setup_theme', 'mosalam_setup');
 
 /**
+ * Get file modification time as asset version for clean cache-busting.
+ */
+function mosalam_get_asset_version($relative_path)
+{
+    $file_path = MOSALAM_THEME_DIR . '/' . ltrim($relative_path, '/');
+    if (file_exists($file_path)) {
+        return filemtime($file_path);
+    }
+    return MOSALAM_THEME_VERSION;
+}
+
+/**
  * Front-end + editor assets. All compiled from the theme's single node_modules
  * via `npm run build` (see package.json / webpack.config.js).
  */
@@ -44,7 +56,7 @@ function mosalam_enqueue_assets()
         'mosalam-tailwind',
         MOSALAM_THEME_URI . '/assets/css/tailwind.css',
         [],
-        MOSALAM_THEME_VERSION
+        mosalam_get_asset_version('assets/css/tailwind.css')
     );
 
     $theme_js = MOSALAM_THEME_DIR . '/assets/js/build/theme.js';
@@ -53,7 +65,7 @@ function mosalam_enqueue_assets()
             'mosalam-theme',
             MOSALAM_THEME_URI . '/assets/js/build/theme.js',
             [],
-            MOSALAM_THEME_VERSION,
+            mosalam_get_asset_version('assets/js/build/theme.js'),
             true
         );
     }
@@ -73,7 +85,7 @@ function mosalam_enqueue_assets()
             'market-analysis-css',
             MOSALAM_THEME_URI . '/assets/css/market-analysis.css',
             [],
-            MOSALAM_THEME_VERSION
+            mosalam_get_asset_version('assets/css/market-analysis.css')
         );
 
         // Enqueue custom JS for the dashboard (depends on chart-js)
@@ -81,7 +93,7 @@ function mosalam_enqueue_assets()
             'market-analysis-js',
             MOSALAM_THEME_URI . '/assets/js/market-analysis.js',
             ['chart-js'],
-            MOSALAM_THEME_VERSION,
+            mosalam_get_asset_version('assets/js/market-analysis.js'),
             true
         );
     }

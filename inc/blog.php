@@ -32,7 +32,32 @@ function mosalam_reading_time( $post_id = null ) {
 }
 
 /* ──────────────────────────────────────────────
- * 3. Auto-inject IDs into H2/H3 for TOC anchoring.
+ * 3. Blog archive page URL (the page assigned the "Blog Archive" template),
+ *    for blocks that link out to it (e.g. Latest Articles' "View all").
+ * ────────────────────────────────────────────── */
+function mosalam_get_blog_archive_url() {
+    static $url = null;
+
+    if ( null !== $url ) {
+        return $url;
+    }
+
+    $pages = get_posts( [
+        'post_type' => 'page',
+        'post_status' => 'publish',
+        'posts_per_page' => 1,
+        'meta_key' => '_wp_page_template',
+        'meta_value' => 'templates/template-blog.php',
+        'fields' => 'ids',
+    ] );
+
+    $url = $pages ? get_permalink( $pages[0] ) : home_url( '/blog' );
+
+    return $url;
+}
+
+/* ──────────────────────────────────────────────
+ * 4. Auto-inject IDs into H2/H3 for TOC anchoring.
  *    Only runs on singular post views.
  * ────────────────────────────────────────────── */
 function mosalam_add_heading_ids( $content ) {
@@ -64,7 +89,7 @@ function mosalam_add_heading_ids( $content ) {
 add_filter( 'the_content', 'mosalam_add_heading_ids', 5 );
 
 /* ──────────────────────────────────────────────
- * 4. Extract H2/H3 headings for Table of Contents.
+ * 5. Extract H2/H3 headings for Table of Contents.
  * ────────────────────────────────────────────── */
 function mosalam_get_toc_headings( $post_id = null ) {
     $post_id = $post_id ?: get_the_ID();
@@ -86,7 +111,7 @@ function mosalam_get_toc_headings( $post_id = null ) {
 }
 
 /* ──────────────────────────────────────────────
- * 5. Quick Contact Form handler (admin-post).
+ * 6. Quick Contact Form handler (admin-post).
  * ────────────────────────────────────────────── */
 function mosalam_blog_contact_handler() {
     // Verify nonce

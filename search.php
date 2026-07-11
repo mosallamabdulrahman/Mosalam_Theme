@@ -39,7 +39,7 @@ $results_count  = $wp_query->found_posts;
   <section class="container-custom pt-8 pb-16 md:pt-12 md:pb-24">
     <?php if ( have_posts() ) : ?>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 animate-fade-in-up">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 animate-fade-in-up">
         <?php while ( have_posts() ) : the_post(); 
             $post_type = get_post_type();
         ?>

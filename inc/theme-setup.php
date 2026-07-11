@@ -56,6 +56,7 @@ function mosalam_activate_theme()
         'sectors',
         'about-preview',
         'tackle-tomorrow',
+        'latest-articles',
     ]);
 
     mosalam_seed_page('about', 'About Us', [
