@@ -22,30 +22,92 @@
       "type": "array",
       "default": [
         {
-          "title": "Data and AI",
-          "description": "Data, AI, and digital automation solutions that unify, analyze, and automate business processes across hybrid environments. Capabilities span data fabric integration, intelligent workflow automation, and AI-driven transformation to enhance efficiency and decision-making.",
+          "title": "Web Hosting",
+          "description": "Premium managed and unmanaged cloud hosting solutions. We offer isolated virtual environments, enterprise-grade containerization, SSD storage, and daily automated backups for maximum speed and uptime.",
           "links": [
             {
-              "label": "Data",
-              "url": "/data"
+              "label": "Managed Cloud VPS",
+              "url": "/services/cloud-vps"
             },
             {
-              "label": "Artificial Intelligence",
-              "url": "/artificial-intelligence"
+              "label": "Dedicated Server Clusters",
+              "url": "/services/dedicated-servers"
             },
             {
-              "label": "Digital Automation",
-              "url": "/digital-automation"
+              "label": "Enterprise Container Nodes",
+              "url": "/services/containers"
             }
           ]
         },
         {
-          "title": "Security",
-          "description": "Security and resilience – from see to solve. Zero trust, observability to automation, managed protection and response, and board-ready assurance help to keep resilience, compliance, and costs predictable.",
+          "title": "IT Services",
+          "description": "Proactive system operations, cybersecurity consulting, and infrastructure management. We keep your systems updated, monitored, and secured under strict zero-trust standards.",
           "links": [
             {
-              "label": "Cyber Security",
-              "url": "/it-solutions/cyber-security"
+              "label": "System Administration",
+              "url": "/services/sysadmin"
+            },
+            {
+              "label": "Zero-Trust Cybersecurity",
+              "url": "/services/cybersecurity"
+            },
+            {
+              "label": "Network & VPN Solutions",
+              "url": "/services/networking"
+            }
+          ]
+        },
+        {
+          "title": "ERP Systems",
+          "description": "Complete implementation and customization of digital enterprise systems. We deploy Odoo ERP and Moodle LMS systems optimized for school management, retail, CRM, and supply chain workflows.",
+          "links": [
+            {
+              "label": "Odoo CRM & ERP Deploy",
+              "url": "/services/odoo"
+            },
+            {
+              "label": "Moodle LMS Customization",
+              "url": "/services/moodle"
+            },
+            {
+              "label": "Workflow & API Sync",
+              "url": "/services/erp-sync"
+            }
+          ]
+        },
+        {
+          "title": "Front End Development",
+          "description": "Designing and building highly responsive, pixel-perfect user interfaces. We utilize React and Next.js to craft lightweight, SEO-friendly, and blazing-fast web interfaces.",
+          "links": [
+            {
+              "label": "UI/UX & Web Design",
+              "url": "/services/ui-ux"
+            },
+            {
+              "label": "Next.js & React Apps",
+              "url": "/services/nextjs-react"
+            },
+            {
+              "label": "Performance Optimization",
+              "url": "/services/speed-opt"
+            }
+          ]
+        },
+        {
+          "title": "Back End Development",
+          "description": "Engineering secure, scalable database architectures and robust application program interfaces (APIs). We build the core logic and backend integrations that drive your complex business apps.",
+          "links": [
+            {
+              "label": "API Integration (REST/GraphQL)",
+              "url": "/services/apis"
+            },
+            {
+              "label": "Database Design & Tuning",
+              "url": "/services/databases"
+            },
+            {
+              "label": "Custom Software Logic",
+              "url": "/services/custom-software"
             }
           ]
         }
