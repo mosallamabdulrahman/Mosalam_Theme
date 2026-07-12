@@ -19,10 +19,14 @@ body {
   backdrop-filter: blur(20px);
 }
 
+@media (min-width: 1024px) {
+  .cinematic-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+}
 .cinematic-section {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
   position: relative;
   width: 100%;
   overflow: hidden;

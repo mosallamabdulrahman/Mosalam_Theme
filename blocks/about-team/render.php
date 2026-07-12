@@ -6,7 +6,7 @@ $eyebrow = $attributes['eyebrow'] ?? '';
 $title = $attributes['title'] ?? '';
 $members = $attributes['members'] ?? [];
 ?>
-<section class="py-24 bg-surface-container-low border-t border-black/5">
+<section class="py-10 md:py-16 bg-surface-container-low border-t border-black/5">
   <div class="container-custom">
     <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-4" data-animate="fade-up">
       <h2 class="text-h2 text-primary"><?php echo wp_kses_post($title); ?></h2>

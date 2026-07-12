@@ -6,8 +6,9 @@
   "scripts": {
     "build:blocks": "wp-scripts build --webpack-copy-php --config webpack.config.js",
     "build:css": "tailwindcss -i ./assets/css/tailwind-input.css -o ./assets/css/tailwind.css --minify",
+    "watch:css": "tailwindcss -i ./assets/css/tailwind-input.css -o ./assets/css/tailwind.css --watch",
     "build": "npm run build:blocks && npm run build:css",
-    "start": "wp-scripts start --webpack-copy-php --config webpack.config.js"
+    "start": "npm run build:blocks && npm run watch:css && wp-scripts start --webpack-copy-php --config webpack.config.js"
   },
   "devDependencies": {
     "@wordpress/scripts": "^30.0.0",

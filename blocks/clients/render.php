@@ -6,7 +6,7 @@ $eyebrow = $attributes['eyebrow'] ?? '';
 $title = $attributes['title'] ?? '';
 $clients = $attributes['clients'] ?? [];
 ?>
-<section id="clients" class="w-full relative bg-white py-24 border-b border-black/5">
+<section id="clients" class="w-full relative bg-white py-10 md:py-16 border-b border-black/5">
   <div class="container-custom w-full">
     <div class="text-center mb-12" data-animate="fade-up">
       <span class="text-overline-lg text-secondary mb-4 block"><?php echo wp_kses_post($eyebrow); ?></span>

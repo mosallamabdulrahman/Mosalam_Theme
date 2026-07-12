@@ -6,6 +6,9 @@ $eyebrow = $attributes['eyebrow'] ?? '';
 $title = $attributes['title'] ?? '';
 $description = $attributes['description'] ?? '';
 $background_image = $attributes['backgroundImage'] ?? '';
+if ( empty( $background_image ) || strpos( $background_image, 'googleusercontent.com' ) !== false || strpos( $background_image, 'unsplash.com' ) !== false ) {
+    $background_image = MOSALAM_THEME_URI . '/assets/images/digital-matrix-background.webp';
+}
 $features = $attributes['features'] ?? [];
 ?>
 <section id="ai" class="min-h-screen w-full relative cinematic-section text-white">

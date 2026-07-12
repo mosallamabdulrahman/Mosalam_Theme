@@ -255,9 +255,38 @@ function initMethodologyTabs() {
       const underline = button.querySelector('.js-methodology-tab-underline');
       if (underline) underline.classList.toggle('hidden', !isActive);
     });
+
+    let currentPanel = null;
+    let targetPanel = null;
+
     panels.forEach((panel) => {
-      panel.classList.toggle('hidden', Number(panel.dataset.stepIndex) !== index);
+      if (!panel.classList.contains('hidden')) {
+        currentPanel = panel;
+      }
+      if (Number(panel.dataset.stepIndex) === index) {
+        targetPanel = panel;
+      }
     });
+
+    if (currentPanel === targetPanel) return;
+
+    if (currentPanel && targetPanel) {
+      animate(currentPanel, { opacity: 0, transform: 'translateY(-10px)' }, { duration: 0.15 }).then(() => {
+        currentPanel.classList.add('hidden');
+        currentPanel.style.opacity = '1';
+        currentPanel.style.transform = 'none';
+
+        targetPanel.classList.remove('hidden');
+        targetPanel.style.opacity = '0';
+        targetPanel.style.transform = 'translateY(15px)';
+        animate(targetPanel, { opacity: 1, transform: 'translateY(0)' }, { duration: 0.35, ease: 'easeOut' });
+      });
+    } else if (targetPanel) {
+      targetPanel.classList.remove('hidden');
+      targetPanel.style.opacity = '0';
+      targetPanel.style.transform = 'translateY(15px)';
+      animate(targetPanel, { opacity: 1, transform: 'translateY(0)' }, { duration: 0.35, ease: 'easeOut' });
+    }
   };
 
   tabButtons.forEach((button) => {

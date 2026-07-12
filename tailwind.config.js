@@ -62,6 +62,9 @@ module.exports = {
         tertiary: '#6b5e2b',
         'on-surface': '#1b1c1c',
       },
+      spacing: {
+        '18': '4.5rem',
+      },
       borderRadius: {
         action: '0.5rem',
       },

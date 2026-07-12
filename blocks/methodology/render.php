@@ -7,7 +7,7 @@ $title = $attributes['title'] ?? '';
 $description = $attributes['description'] ?? '';
 $steps = $attributes['steps'] ?? [];
 ?>
-<section id="methodology" class="min-h-screen w-full relative cinematic-section bg-[#fcf9f8] py-24">
+<section id="methodology" class="min-h-screen w-full relative cinematic-section bg-[#fcf9f8] py-10 md:py-16">
   <div class="container-custom w-full">
     <div class="max-w-3xl mb-16" data-animate="fade-up">
       <span class="text-overline-lg text-secondary mb-6 block"><?php echo wp_kses_post($eyebrow); ?></span>

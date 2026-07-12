@@ -22,15 +22,18 @@ $mosalam_mega_menu_columns = mosalam_get_mega_menu_columns();
 <nav id="site-header" class="sticky top-0 w-full z-50 bg-[#001b35] border-b border-white/10 shadow-sm h-24 md:h-32">
   <div class="flex justify-between items-center container-custom h-full">
     <div class="flex items-center gap-16">
-      <div>
-        <a href="<?php echo esc_url(home_url('/')); ?>">
+      <div class="flex flex-col">
+        <a href="<?php echo esc_url(home_url('/')); ?>" class="block">
           <img
             src="<?php echo esc_url($mosalam_logo); ?>"
             alt="MOSALAM Logo"
-            class="h-6 md:h-9"
+            class="h-6 md:h-9 brightness-0 invert"
             referrerpolicy="no-referrer"
           >
         </a>
+        <span class="text-[7px] md:text-[8px] text-white/60 mt-1 font-bold tracking-wider uppercase leading-none max-w-[130px] md:max-w-none break-words whitespace-normal md:whitespace-nowrap">
+          Managed Operations Systems And Logistics Asset Management
+        </span>
       </div>
       <?php
       wp_nav_menu([
@@ -106,7 +109,7 @@ $mosalam_mega_menu_columns = mosalam_get_mega_menu_columns();
 
   <!-- Mobile Menu Overlay -->
   <div id="mobile-menu-panel" class="hidden fixed inset-y-0 right-0 w-full bg-[#001b35] z-[60] lg:hidden overflow-y-auto" style="transform: translateX(100%);">
-    <div class="flex flex-col px-8 py-24">
+    <div class="flex flex-col px-8 py-10 md:py-16">
       <div class="flex justify-between items-center mb-12">
         <img src="<?php echo esc_url($mosalam_logo); ?>" alt="MOSALAM Logo" class="h-8 w-auto px-10" referrerpolicy="no-referrer">
         <button id="mobile-menu-close" type="button" class="p-2 text-white hover:bg-white/5 rounded-action">

@@ -7,9 +7,12 @@ $title = $attributes['title'] ?? '';
 $paragraph1 = $attributes['paragraph1'] ?? '';
 $paragraph2 = $attributes['paragraph2'] ?? '';
 $image = $attributes['image'] ?? '';
+if ( empty( $image ) || strpos( $image, 'googleusercontent.com' ) !== false || strpos( $image, 'unsplash.com' ) !== false ) {
+    $image = MOSALAM_THEME_URI . '/assets/images/team-collaboration.webp';
+}
 $stats = $attributes['stats'] ?? [];
 ?>
-<section id="about" class="min-h-screen w-full relative cinematic-section bg-white py-24">
+<section id="about" class="min-h-screen w-full relative cinematic-section bg-white py-10 md:py-16">
   <div class="container-custom w-full">
     <div class="flex flex-col lg:flex-row gap-16 items-center">
       <div class="w-full lg:w-1/2" data-animate="fade-right">
@@ -26,7 +29,7 @@ $stats = $attributes['stats'] ?? [];
           <?php endforeach; ?>
         </div>
       </div>
-      <div class="w-full lg:w-1/2 h-[600px] relative" data-animate="fade-left">
+      <div class="w-full lg:w-1/2 h-64 sm:h-[400px] lg:h-[600px] relative" data-animate="fade-left">
         <img class="w-full h-full object-cover rounded-lg shadow-2xl" alt="Team collaboration" src="<?php echo esc_url($image); ?>" referrerpolicy="no-referrer">
         <div class="absolute inset-0 bg-[#001b35]/10 rounded-lg"></div>
       </div>

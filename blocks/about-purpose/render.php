@@ -9,7 +9,7 @@ $badge_label = $attributes['badgeLabel'] ?? '';
 $badge_text = $attributes['badgeText'] ?? '';
 $paragraphs = $attributes['paragraphs'] ?? [];
 ?>
-<section class="py-24 bg-surface">
+<section class="py-10 md:py-16 bg-surface">
   <div class="container-custom grid grid-cols-1 md:grid-cols-2 gap-20 items-start">
     <div data-animate="fade-right">
       <span class="text-secondary font-bold tracking-[0.2em] text-xs uppercase mb-4 block"><?php echo wp_kses_post($eyebrow); ?></span>

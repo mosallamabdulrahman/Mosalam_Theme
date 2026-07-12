@@ -33,7 +33,7 @@ registerBlockType(metadata.name, {
   edit: ({ attributes, setAttributes }) => {
     const { eyebrow, title, postsToShow, viewAllLabel } = attributes;
     const blockProps = useBlockProps({
-      className: "py-24 bg-surface border-t border-black/5",
+      className: "py-10 md:py-16 bg-surface border-t border-black/5",
     });
 
     const posts = useSelect(
@@ -90,7 +90,7 @@ registerBlockType(metadata.name, {
               />
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4">
               {!posts && (
                 <div className="col-span-full flex justify-center py-12">
                   <Spinner />

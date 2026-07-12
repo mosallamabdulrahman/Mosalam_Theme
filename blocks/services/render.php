@@ -25,7 +25,7 @@ if ( ! function_exists( 'mosalam_get_service_icon' ) ) {
     }
 }
 ?>
-<section id="services" class="min-h-screen w-full relative cinematic-section bg-[#001b35] py-24">
+<section id="services" class="min-h-screen w-full relative cinematic-section bg-[#001b35] py-10 md:py-16">
   <div class="container-custom w-full">
     <div class="max-w-3xl mb-16" data-animate="fade-up">
       <span class="text-overline-lg text-secondary mb-4 block"><?php echo wp_kses_post($eyebrow); ?></span>

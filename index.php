@@ -5,7 +5,7 @@
 
 get_header();
 ?>
-<main class="w-full bg-surface text-on-surface scroll-smooth container-custom py-24">
+<main class="w-full bg-surface text-on-surface scroll-smooth container-custom py-10 md:py-16">
   <?php
   if (have_posts()) :
       while (have_posts()) :

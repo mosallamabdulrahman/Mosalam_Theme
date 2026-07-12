@@ -21,7 +21,7 @@ registerBlockType(metadata.name, {
   icon,
   edit: ({ attributes, setAttributes }) => {
     const { title, cards } = attributes;
-    const blockProps = useBlockProps({ className: 'w-full relative bg-secondary text-white text-center py-16 md:py-20 lg:py-24' });
+    const blockProps = useBlockProps({ className: 'w-full relative bg-secondary text-white text-center py-12 md:py-16 lg:py-18' });
 
     const updateCard = (index, key, value) => {
       const next = cards.map((c, i) => (i === index ? { ...c, [key]: value } : c));

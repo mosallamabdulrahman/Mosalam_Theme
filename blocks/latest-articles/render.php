@@ -17,7 +17,7 @@ $latest_articles_query = new WP_Query([
 $blog_archive_url = mosalam_get_blog_archive_url();
 ?>
 <?php if ($latest_articles_query->have_posts()) : ?>
-<section id="latest-articles" class="py-24 bg-surface border-t border-black/5">
+<section id="latest-articles" class="py-10 md:py-16 bg-surface border-t border-black/5">
   <div class="container-custom">
     <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-4" data-animate="fade-up">
       <h2 class="text-h2 text-primary"><?php echo wp_kses_post($title); ?></h2>
@@ -32,7 +32,7 @@ $blog_archive_url = mosalam_get_blog_archive_url();
       </div>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6" data-animate-group="fade-up">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4" data-animate-group="fade-up">
       <?php while ($latest_articles_query->have_posts()) : $latest_articles_query->the_post(); ?>
 
         <article <?php post_class('group flex flex-col bg-white rounded-action border border-outline-variant/20 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1'); ?> data-animate-item>

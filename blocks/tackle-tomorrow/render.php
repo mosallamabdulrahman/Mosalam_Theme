@@ -5,7 +5,7 @@
 $title = $attributes['title'] ?? '';
 $cards = $attributes['cards'] ?? [];
 ?>
-<section class="w-full relative bg-secondary text-white text-center py-16 md:py-20 lg:py-24">
+<section class="w-full relative bg-secondary text-white text-center py-12 md:py-16 lg:py-18">
   <div class="container-custom">
     <div class="mx-auto">
       <h2 class="text-h1 mb-10 md:mb-12" data-animate="fade-up"><?php echo wp_kses_post($title); ?></h2>

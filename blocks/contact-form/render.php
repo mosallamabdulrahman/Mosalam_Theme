@@ -30,7 +30,7 @@ function mosalam_contact_icon_paths($name)
     return $icons[$name] ?? $icons['mail'];
 }
 ?>
-<section class="py-24 bg-surface">
+<section class="py-10 md:py-16 bg-surface">
   <div class="container-custom grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
     <div class="lg:col-span-5 space-y-16">
       <div data-animate="fade-right">

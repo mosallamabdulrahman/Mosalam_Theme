@@ -18,7 +18,7 @@ $results_count  = $wp_query->found_posts;
       <img src="<?php echo esc_url( MOSALAM_THEME_URI . '/assets/images/blog_hero_bg.png' ); ?>" alt="" class="w-full h-full object-cover opacity-35">
     </div>
     <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/45"></div>
-    <div class="relative container-custom py-20 md:py-24 text-center">
+    <div class="relative container-custom py-14 md:py-18 text-center">
       <p class="text-overline text-secondary mb-4"><?php esc_html_e( 'Search Results', 'mosalam' ); ?></p>
       <h1 class="text-h1 text-white mb-4">
         <?php printf( esc_html__( 'Search: "%s"', 'mosalam' ), $search_query ); ?>
@@ -39,7 +39,7 @@ $results_count  = $wp_query->found_posts;
   <section class="container-custom pt-8 pb-16 md:pt-12 md:pb-24">
     <?php if ( have_posts() ) : ?>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 animate-fade-in-up">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 animate-fade-in-up">
         <?php while ( have_posts() ) : the_post(); 
             $post_type = get_post_type();
         ?>

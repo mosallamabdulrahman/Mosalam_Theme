@@ -4,7 +4,7 @@
  */
 $items = $attributes['items'] ?? [];
 ?>
-<section class="py-24 bg-surface-container-low">
+<section class="py-10 md:py-16 bg-surface-container-low">
   <div class="container-custom">
     <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-[2px] bg-outline-variant/20 shadow-sm overflow-hidden" data-animate-group="fade-up">
       <?php foreach ($items as $item) : ?>
