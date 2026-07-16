@@ -135,11 +135,11 @@ $mosalam_contact_items = [
   </div>
 
   <div class="container-custom py-8 border-t border-[#001b35]/10 flex flex-col md:flex-row justify-between items-center gap-6">
-    <p class="text-[#001b35]/40 text-[12px] font-bold tracking-widest uppercase text-center md:text-left"><?php echo esc_html(get_theme_mod('mosalam_copyright', '© 2024 MOSALAM DIGITAL HORIZON. ALL RIGHTS RESERVED.')); ?></p>
+    <p class="text-[#001b35]/80 text-[12px] font-bold tracking-widest uppercase text-center md:text-left"><?php echo esc_html(get_theme_mod('mosalam_copyright', '© 2024 MOSALAM DIGITAL HORIZON. ALL RIGHTS RESERVED.')); ?></p>
     <div class="flex items-center gap-8">
-      <div class="flex gap-4 text-[11px] font-bold tracking-[0.1em] text-[#001b35]/40 uppercase">
+      <div class="flex gap-4 text-[11px] font-bold tracking-[0.1em] text-[#001b35]/80 uppercase">
         <?php foreach ($mosalam_offices as $office) : ?>
-          <span class="flex items-center gap-2 px-3 py-1 rounded-full bg-[#001b35]/5 border border-[#001b35]/5"><?php echo esc_html($office); ?></span>
+          <span class="flex items-center gap-2 px-3 py-1 rounded-full bg-[#001b35]/5 border border-[#001b35]/10"><?php echo esc_html($office); ?></span>
         <?php endforeach; ?>
       </div>
     </div>

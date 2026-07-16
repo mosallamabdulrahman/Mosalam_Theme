@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "mosalam/derwaza-lifestyle",
+  "title": "Derwaza Shop by Lifestyle",
+  "category": "derwazamall",
+  "icon": "heart",
+  "description": "Pixel perfect Shop by Lifestyle section with 5 portrait image cards and custom bottom strips.",
+  "textdomain": "mosalam",
+  "editorScript": "file:./build/index.js",
+  "render": "file:./render.php",
+  "attributes": {
+    "sectionTitle": {
+      "type": "string",
+      "default": "Shop by Lifestyle"
+    },
+    "items": {
+      "type": "array",
+      "default": [
+        { "title": "Travel Essentials", "linkLabel": "Shop Now", "linkUrl": "#", "imageUrl": "", "bgColor": "#eedec9" },
+        { "title": "Home Office", "linkLabel": "Shop Now", "linkUrl": "#", "imageUrl": "", "bgColor": "#eedec9" },
+        { "title": "Fitness", "linkLabel": "Shop Now", "linkUrl": "#", "imageUrl": "", "bgColor": "#eedec9" },
+        { "title": "Smart Home", "linkLabel": "Shop Now", "linkUrl": "#", "imageUrl": "", "bgColor": "#eedec9" },
+        { "title": "Car Essentials", "linkLabel": "Shop Now", "linkUrl": "#", "imageUrl": "", "bgColor": "#eedec9" }
+      ]
+    }
+  },
+  "supports": {
+    "align": ["wide", "full"]
+  }
+}

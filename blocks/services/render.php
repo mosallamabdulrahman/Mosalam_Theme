@@ -45,7 +45,7 @@ if ( ! function_exists( 'mosalam_get_service_icon' ) ) {
               <?php foreach ($category['links'] as $link) : ?>
                 <div class="group flex items-center justify-between p-3 bg-[#fcf9f8] hover:bg-[#001b35] transition-all duration-300">
                   <span class="text-body-sm font-medium text-[#001b35] group-hover:text-white transition-colors"><?php echo esc_html($link['label']); ?></span>
-                  <svg class="w-4 h-4 text-secondary transform -translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+                  <svg class="w-4  transition-all duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
                 </div>
               <?php endforeach; ?>
             </div>

@@ -4,15 +4,17 @@
  */
 $cards = $attributes['cards'] ?? [];
 
-function mosalam_amv_offset_class($index)
-{
-    if (1 === $index) {
-        return 'lg:-mt-12';
+if ( ! function_exists( 'mosalam_amv_offset_class' ) ) {
+    function mosalam_amv_offset_class($index)
+    {
+        if (1 === $index) {
+            return 'lg:-mt-12';
+        }
+        if (2 === $index) {
+            return 'lg:mt-12';
+        }
+        return '';
     }
-    if (2 === $index) {
-        return 'lg:mt-12';
-    }
-    return '';
 }
 ?>
 <section class="py-32 bg-surface-container-low">

@@ -14,15 +14,31 @@ function navigate(viewId) {
     // Update State
     state.currentView = viewId;
 
-    // Hide all sections
+    // Hide all sections & reset inline transitions
     ['dashboard', 'competitors', 'strategy', 'pricing'].forEach(id => {
-        document.getElementById(id).classList.add('hidden');
-        document.getElementById('btn-' + id).classList.remove('active');
+        const sec = document.getElementById(id);
+        if (sec) {
+            sec.classList.add('hidden');
+            sec.style.opacity = '0';
+            sec.style.transform = 'translateY(8px)';
+        }
+        const btn = document.getElementById('btn-' + id);
+        if (btn) btn.classList.remove('active');
     });
 
     // Show selected
-    document.getElementById(viewId).classList.remove('hidden');
-    document.getElementById('btn-' + viewId).classList.add('active');
+    const activeSec = document.getElementById(viewId);
+    if (activeSec) {
+        activeSec.classList.remove('hidden');
+        activeSec.style.transition = 'opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.25s cubic-bezier(0.4, 0, 0.2, 1)';
+        requestAnimationFrame(() => {
+            activeSec.style.opacity = '1';
+            activeSec.style.transform = 'translateY(0)';
+        });
+    }
+    
+    const activeBtn = document.getElementById('btn-' + viewId);
+    if (activeBtn) activeBtn.classList.add('active');
 
     // Trigger resize for charts to ensure they render correctly in new container
     window.dispatchEvent(new Event('resize'));

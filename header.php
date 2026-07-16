@@ -50,7 +50,7 @@ $mosalam_mega_menu_columns = mosalam_get_mega_menu_columns();
           id="search-form"
           action="<?php echo esc_url(home_url('/')); ?>"
           method="get"
-          class="hidden fixed left-4 right-4 top-28 z-[70] items-center rounded-action bg-[#001b35]/95 px-4 py-3 border border-white/20 backdrop-blur-md md:absolute md:left-auto md:right-0 md:top-auto md:w-[min(42vw,360px)] md:bg-white/10 md:py-2 lg:w-[280px]"
+          class="hidden fixed left-4 right-4 top-28 z-[70] items-center rounded-action bg-[#001b35]/95 px-4 py-3 border border-white/20 backdrop-blur-md md:absolute md:left-auto md:right-0 md:top-[56px] md:w-[300px] md:bg-[#001b35] md:py-2.5 md:px-4 md:shadow-xl md:border md:border-white/15"
         >
           <svg class="w-4 h-4 text-white/50 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
           <input
@@ -64,7 +64,7 @@ $mosalam_mega_menu_columns = mosalam_get_mega_menu_columns();
             <svg class="w-4 h-4 text-white/80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
           </button>
         </form>
-        <button id="search-open" type="button" class="p-3 hover:bg-white/10 rounded-action transition-colors flex items-center justify-center group">
+        <button id="search-open" aria-label="Open Search" type="button" class="p-3 hover:bg-white/10 rounded-action transition-colors flex items-center justify-center group">
           <svg class="w-6 h-6 text-white group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
         </button>
       </div>
@@ -72,7 +72,7 @@ $mosalam_mega_menu_columns = mosalam_get_mega_menu_columns();
         href="<?php echo esc_url($mosalam_cta_url); ?>"
         class="hidden sm:block bg-secondary text-white hover:bg-white hover:text-secondary px-8 py-3 rounded-action text-overline transition-all border border-secondary hover:border-white"
       ><?php echo esc_html($mosalam_cta_label); ?></a>
-      <button id="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu-panel" class="lg:hidden p-3 text-white hover:bg-white/10 rounded-action transition-colors flex items-center justify-center">
+      <button id="mobile-menu-toggle" type="button" aria-label="Open Menu" aria-expanded="false" aria-controls="mobile-menu-panel" class="lg:hidden p-3 text-white hover:bg-white/10 rounded-action transition-colors flex items-center justify-center">
         <div class="relative w-8 h-8">
           <span class="mobile-burger-line absolute top-2 left-0 w-8 h-0.5 bg-white"></span>
           <span class="mobile-burger-line absolute top-4 left-0 w-8 h-0.5 bg-white"></span>

@@ -17,7 +17,7 @@ require_once MOSALAM_THEME_DIR . '/inc/customizer.php';
 require_once MOSALAM_THEME_DIR . '/inc/theme-setup.php';
 require_once MOSALAM_THEME_DIR . '/inc/security-and-uploads.php';
 require_once MOSALAM_THEME_DIR . '/inc/blog.php';
-// require_once MOSALAM_THEME_DIR . '/inc/seeder.php';
+require_once MOSALAM_THEME_DIR . '/inc/projects.php';
 
 /**
  * Theme supports.

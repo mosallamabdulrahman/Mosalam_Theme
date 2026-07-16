@@ -54,17 +54,6 @@
               "href": ""
             }
           ]
-        },
-        {
-          "icon": "globe",
-          "title": "Media & Press",
-          "note": "",
-          "lines": [
-            {
-              "text": "media@mosalam.com",
-              "href": "mailto:media@mosalam.com"
-            }
-          ]
         }
       ]
     },
@@ -128,9 +117,6 @@
     }
   },
   "supports": {
-    "align": [
-      "wide",
-      "full"
-    ]
+    "align": ["wide", "full"]
   }
 }

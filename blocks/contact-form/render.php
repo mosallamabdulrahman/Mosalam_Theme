@@ -19,15 +19,17 @@ $message_label = $attributes['messageLabel'] ?? '';
 $message_placeholder = $attributes['messagePlaceholder'] ?? '';
 $submit_label = $attributes['submitLabel'] ?? '';
 
-function mosalam_contact_icon_paths($name)
-{
-    $icons = [
-        'mail' => '<rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-10 6L2 7" />',
-        'phone' => '<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7A2 2 0 0 1 22 16.9Z" />',
-        'globe' => '<circle cx="12" cy="12" r="10" /><path d="M2 12h20" /><path d="M12 2a15.3 15.3 0 0 1 0 20" /><path d="M12 2a15.3 15.3 0 0 0 0 20" />',
-    ];
+if ( ! function_exists( 'mosalam_contact_icon_paths' ) ) {
+    function mosalam_contact_icon_paths($name)
+    {
+        $icons = [
+            'mail' => '<rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-10 6L2 7" />',
+            'phone' => '<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7A2 2 0 0 1 22 16.9Z" />',
+            'globe' => '<circle cx="12" cy="12" r="10" /><path d="M2 12h20" /><path d="M12 2a15.3 15.3 0 0 1 0 20" /><path d="M12 2a15.3 15.3 0 0 0 0 20" />',
+        ];
 
-    return $icons[$name] ?? $icons['mail'];
+        return $icons[$name] ?? $icons['mail'];
+    }
 }
 ?>
 <section class="py-10 md:py-16 bg-surface">

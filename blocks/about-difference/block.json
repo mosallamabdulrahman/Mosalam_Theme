@@ -10,19 +10,51 @@
   "editorScript": "file:./build/index.js",
   "render": "file:./render.php",
   "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    },
     "title": { "type": "string", "default": "The Mosalam Difference" },
-    "description": { "type": "string", "default": "We don't just sell technology; we integrate solutions into the fabric of your organization." },
+    "description": {
+      "type": "string",
+      "default": "We don't just sell technology; we integrate solutions into the fabric of your organization."
+    },
     "items": {
       "type": "array",
       "default": [
-        { "number": "01", "title": "Agile Thinking", "description": "The speed of a boutique firm with the muscle of a global enterprise. We adapt as fast as the markets move." },
-        { "number": "02", "title": "End-to-End Capability", "description": "From initial architectural blueprint to final deployment and 24/7 managed services." },
-        { "number": "03", "title": "People-First Culture", "description": "Technology is a tool; people are the power. We prioritize human intuition in every automated process." },
-        { "number": "04", "title": "Vendor-Independence", "description": "Our loyalty is to your outcome, not a specific software license. We select the best-in-class for your specific needs." }
+        {
+          "number": "01",
+          "title": "Agile Thinking",
+          "description": "The speed of a boutique firm with the muscle of a global enterprise. We adapt as fast as the markets move."
+        },
+        {
+          "number": "02",
+          "title": "End-to-End Capability",
+          "description": "From initial architectural blueprint to final deployment and 24/7 managed services."
+        },
+        {
+          "number": "03",
+          "title": "People-First Culture",
+          "description": "Technology is a tool; people are the power. We prioritize human intuition in every automated process."
+        },
+        {
+          "number": "04",
+          "title": "Vendor-Independence",
+          "description": "Our loyalty is to your outcome, not a specific software license. We select the best-in-class for your specific needs."
+        }
       ]
     },
     "highlightLabel": { "type": "string", "default": "Highlight" },
-    "highlightTitle": { "type": "string", "default": "Official Tech Provider for Vision 2030" },
-    "highlightDescription": { "type": "string", "default": "Delivering critical infrastructure for major transformative events, demonstrating scale and reliability under unprecedented pressure." }
+    "highlightTitle": {
+      "type": "string",
+      "default": "Official Tech Provider for Vision 2030"
+    },
+    "highlightDescription": {
+      "type": "string",
+      "default": "Delivering critical infrastructure for major transformative events, demonstrating scale and reliability under unprecedented pressure."
+    }
+  },
+  "supports": {
+    "align": ["wide", "full"]
   }
 }

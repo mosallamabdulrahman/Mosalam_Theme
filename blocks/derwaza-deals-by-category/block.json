@@ -1,0 +1,34 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "mosalam/derwaza-deals-by-category",
+  "title": "Derwaza Deals by Category",
+  "category": "derwazamall",
+  "icon": "products",
+  "description": "Pixel perfect 3-column category deals with a single strip image of products at the bottom.",
+  "textdomain": "mosalam",
+  "editorScript": "file:./build/index.js",
+  "render": "file:./render.php",
+  "attributes": {
+    "col1Title": { "type": "string", "default": "Deals by Category" },
+    "col1Subtitle": { "type": "string", "default": "Top offers on electronics" },
+    "col1BtnLabel": { "type": "string", "default": "View All" },
+    "col1BtnUrl": { "type": "string", "default": "#" },
+    "col1Image": { "type": "string", "default": "" },
+
+    "col2Title": { "type": "string", "default": "Beauty Deals" },
+    "col2Subtitle": { "type": "string", "default": "Best beauty offers" },
+    "col2BtnLabel": { "type": "string", "default": "View All" },
+    "col2BtnUrl": { "type": "string", "default": "#" },
+    "col2Image": { "type": "string", "default": "" },
+
+    "col3Title": { "type": "string", "default": "Home & Kitchen Deals" },
+    "col3Subtitle": { "type": "string", "default": "Great home deals" },
+    "col3BtnLabel": { "type": "string", "default": "View All" },
+    "col3BtnUrl": { "type": "string", "default": "#" },
+    "col3Image": { "type": "string", "default": "" }
+  },
+  "supports": {
+    "align": ["wide", "full"]
+  }
+}

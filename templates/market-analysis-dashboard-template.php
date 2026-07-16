@@ -13,15 +13,15 @@ get_header();
 <main class="market-dashboard-wrap w-full min-h-screen">
     
     <!-- Hero Banner -->
-    <section class="relative bg-primary overflow-hidden animate-fade-in-up">
+    <section class="relative bg-primary overflow-hidden">
         <div class="absolute inset-0">
-            <img src="<?php echo esc_url( MOSALAM_THEME_URI . '/assets/images/blog_hero_bg.png' ); ?>" alt="" class="w-full h-full object-cover opacity-35">
+            <img src="<?php echo esc_url( MOSALAM_THEME_URI . '/assets/images/blog_hero_bg.webp' ); ?>" alt="" class="w-full h-full object-cover opacity-35">
         </div>
         <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/45"></div>
-        <div class="relative container-custom py-16 md:py-20 text-center">
-            <p class="text-overline text-secondary mb-4"><?php esc_html_e( 'Market Intelligence', 'mosalam' ); ?></p>
-            <h1 class="text-h1 text-white mb-4"><?php esc_html_e( 'Strategic Report', 'mosalam' ); ?></h1>
-            <p class="text-body-lg text-white/70 max-w-2xl mx-auto">
+        <div class="relative container-custom py-16 md:py-20 text-center" data-animate-group="fade-up">
+            <p class="text-overline text-secondary mb-4" data-animate-item><?php esc_html_e( 'Market Intelligence', 'mosalam' ); ?></p>
+            <h1 class="text-h1 text-white mb-4" data-animate-item><?php esc_html_e( 'Strategic Report', 'mosalam' ); ?></h1>
+            <p class="text-body-lg text-white/70 max-w-2xl mx-auto" data-animate-item>
                 <?php esc_html_e( 'An in-depth analysis of technical hosting, hidden competitor costs, and the managed cloud infrastructure paradigm.', 'mosalam' ); ?>
             </p>
         </div>
@@ -31,7 +31,7 @@ get_header();
     <div class="container-custom pt-8 pb-16 md:pt-12 md:pb-24 w-full">
 
         <!-- Tabs Navigation -->
-        <div class="flex flex-wrap items-center justify-center gap-2 border-b border-outline-variant/30 pb-6 mb-10 w-full animate-fade-in-up">
+        <div class="flex flex-wrap items-center justify-center gap-2 border-b border-outline-variant/30 pb-6 mb-10 w-full" data-animate="fade-up" data-animate-delay="100">
             <button onclick="navigate('dashboard')" id="btn-dashboard" class="nav-btn active px-5 py-2.5 text-sm font-bold rounded-action border border-outline-variant/30 bg-white text-primary hover:text-secondary hover:border-secondary transition-all">Market Overview</button>
             <button onclick="navigate('competitors')" id="btn-competitors" class="nav-btn px-5 py-2.5 text-sm font-bold rounded-action border border-outline-variant/30 bg-white text-primary hover:text-secondary hover:border-secondary transition-all">Competitor Analysis</button>
             <button onclick="navigate('strategy')" id="btn-strategy" class="nav-btn px-5 py-2.5 text-sm font-bold rounded-action border border-outline-variant/30 bg-white text-primary hover:text-secondary hover:border-secondary transition-all">Mosalam Strategy</button>
@@ -39,7 +39,7 @@ get_header();
         </div>
 
         <!-- SECTION 1: DASHBOARD / MARKET OVERVIEW -->
-        <section id="dashboard" class="space-y-8 animate-fade-in-up">
+        <section id="dashboard" class="space-y-8" data-animate="fade-up" data-animate-delay="150">
             <div class="text-center max-w-3xl mx-auto">
                 <h2 class="text-3xl font-bold text-primary mb-4">Navigating the "Market Void"</h2>
                 <p class="text-lg text-on-surface/80">
@@ -75,7 +75,7 @@ get_header();
         </section>
 
         <!-- SECTION 2: COMPETITOR ANALYSIS -->
-        <section id="competitors" class="hidden space-y-8 animate-fade-in-up">
+        <section id="competitors" class="hidden space-y-8" data-animate="fade-up" data-animate-delay="150">
             <div class="mb-6 border-b border-outline-variant/30 pb-4">
                 <h2 class="text-3xl font-bold text-primary">The Giants: Detailed Reconnaissance</h2>
                 <p class="text-on-surface-variant mt-2">Understanding where they fail is how we win. Analysis based on technical deep-dives of Hostinger and Contabo.</p>
@@ -145,7 +145,7 @@ get_header();
         </section>
 
         <!-- SECTION 3: MOSALAM STRATEGY -->
-        <section id="strategy" class="hidden space-y-8 animate-fade-in-up">
+        <section id="strategy" class="hidden space-y-8" data-animate="fade-up" data-animate-delay="150">
             <div class="mb-6">
                 <h2 class="text-3xl font-bold text-primary">The Mosalam Advantage: Managed Reality</h2>
                 <p class="text-on-surface-variant mt-2">We don't sell "Unlimited." We sell "Uninterrupted." Our strategy focuses on the middle market that has outgrown budget limits.</p>
@@ -252,7 +252,7 @@ get_header();
         </section>
 
         <!-- SECTION 4: PRICING & TCO -->
-        <section id="pricing" class="hidden space-y-8 animate-fade-in-up">
+        <section id="pricing" class="hidden space-y-8" data-animate="fade-up" data-animate-delay="150">
             <div class="mb-6">
                 <h2 class="text-3xl font-bold text-primary">Fair Pricing & Technical Specifications</h2>
                 <p class="text-on-surface-variant mt-2">A sustainable business model based on transparency. Compare the True Cost of Ownership.</p>
@@ -375,7 +375,7 @@ get_header();
         </section>
 
         <!-- Dynamic Transparency Pledge Section -->
-        <section class="bg-primary text-white rounded-action p-8 md:p-12 mt-16 shadow-lg text-center animate-fade-in-up">
+        <section class="bg-primary text-white rounded-action p-8 md:p-12 mt-16 shadow-lg text-center" data-animate="fade-up">
             <h3 class="text-2xl font-bold mb-3 font-headline">Mosalam.Com Transparency Pledge</h3>
             <p class="text-white/70 text-sm max-w-2xl mx-auto mb-6 leading-relaxed">
                 We promise honest specifications, no noisy neighbors, and support that actually fixes problems. We are not the cheapest; we are the most valuable for your peace of mind.

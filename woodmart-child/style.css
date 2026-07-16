@@ -1,0 +1,38 @@
+/*
+ Theme Name:   Woodmart Child
+ Description:  Woodmart Child Theme
+ Author:       XTemos
+ Author URI:   http://xtemos.com
+ Template:     woodmart
+ Version:      1.0.0
+ Text Domain:  woodmart
+*/
+
+/* Product Rating */
+.custom-svg-rating-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    height: 24px;
+    direction: ltr;
+}
+
+.rating-number {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: #333;
+    line-height: 1;
+}
+
+.stars-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.stars-wrapper svg {
+    display: block;
+}
+/* Product Rating End */

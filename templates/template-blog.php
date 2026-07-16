@@ -25,16 +25,16 @@ if ( empty( $archive_title ) ) {
 <main id="main-content" class="w-full bg-surface text-on-surface">
 
   <!-- ── Hero Banner ────────────────────────── -->
-  <section class="relative bg-primary overflow-hidden" data-animate="fade-up">
+  <section class="relative bg-primary overflow-hidden">
     <div class="absolute inset-0">
-      <img src="<?php echo esc_url( MOSALAM_THEME_URI . '/assets/images/blog_hero_bg.png' ); ?>" alt="" class="w-full h-full object-cover opacity-35">
+      <img src="<?php echo esc_url( MOSALAM_THEME_URI . '/assets/images/blog_hero_bg.webp' ); ?>" alt="" class="w-full h-full object-cover opacity-35">
     </div>
     <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/45"></div>
-    <div class="relative container-custom py-20 md:py-28 text-center">
-      <p class="text-overline text-secondary mb-4"><?php esc_html_e( 'Blog Archive', 'mosalam' ); ?></p>
-      <h1 class="text-h1 text-white mb-4"><?php echo esc_html( $archive_title ); ?></h1>
+    <div class="relative container-custom py-20 md:py-28 text-center" data-animate-group="fade-up">
+      <p class="text-overline text-secondary mb-4" data-animate-item><?php esc_html_e( 'Blog Archive', 'mosalam' ); ?></p>
+      <h1 class="text-h1 text-white mb-4" data-animate-item><?php echo esc_html( $archive_title ); ?></h1>
       <?php if ( $archive_desc ) : ?>
-        <div class="text-body-lg text-white/70 max-w-2xl mx-auto"><?php echo wp_kses_post( $archive_desc ); ?></div>
+        <div class="text-body-lg text-white/70 max-w-2xl mx-auto" data-animate-item><?php echo wp_kses_post( $archive_desc ); ?></div>
       <?php endif; ?>
     </div>
   </section>
@@ -53,10 +53,10 @@ if ( empty( $archive_title ) ) {
     if ( $blog_query->have_posts() ) :
     ?>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 animate-fade-in-up">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4" data-animate-group="fade-up">
         <?php while ( $blog_query->have_posts() ) : $blog_query->the_post(); ?>
 
-          <article <?php post_class( 'group flex flex-col bg-white rounded-action border border-outline-variant/20 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1' ); ?>>
+          <article <?php post_class( 'group flex flex-col bg-white rounded-action border border-outline-variant/20 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1' ); ?> data-animate-item>
 
             <!-- Thumbnail -->
             <?php if ( has_post_thumbnail() ) : ?>

@@ -43,8 +43,8 @@ function mosalam_seed_blog_posts() {
         require_once ABSPATH . 'wp-admin/includes/file.php';
         require_once ABSPATH . 'wp-admin/includes/media.php';
 
-        // 1. Sideload the local blog_hero_bg.png once
-        $theme_bg_path = MOSALAM_THEME_DIR . '/assets/images/blog_hero_bg.png';
+        // 1. Sideload the local blog_hero_bg.webp once
+        $theme_bg_path = MOSALAM_THEME_DIR . '/assets/images/blog_hero_bg.webp';
         $featured_image_id = null;
 
         if ( ! file_exists( $theme_bg_path ) ) {
@@ -54,7 +54,7 @@ function mosalam_seed_blog_posts() {
             if ( ! empty( $upload_dir['error'] ) ) {
                 mosalam_log_seed_error( "wp_upload_dir error: " . $upload_dir['error'] );
             } else {
-                $tmp_file = $upload_dir['path'] . '/temp_blog_hero_bg.png';
+                $tmp_file = $upload_dir['path'] . '/temp_blog_hero_bg.webp';
                 
                 if ( ! @copy( $theme_bg_path, $tmp_file ) ) {
                     mosalam_log_seed_error( "Failed to copy " . $theme_bg_path . " to " . $tmp_file );

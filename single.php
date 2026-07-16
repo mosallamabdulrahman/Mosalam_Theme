@@ -20,7 +20,7 @@ while ( have_posts() ) :
   <!-- ── Hero Banner ────────────────────────── -->
   <section class="relative bg-primary overflow-hidden" data-animate="fade-up">
     <div class="absolute inset-0">
-      <img src="<?php echo esc_url( MOSALAM_THEME_URI . '/assets/images/blog_hero_bg.png' ); ?>" alt="" class="w-full h-full object-cover opacity-35">
+      <img src="<?php echo esc_url( MOSALAM_THEME_URI . '/assets/images/blog_hero_bg.webp' ); ?>" alt="" class="w-full h-full object-cover opacity-35">
     </div>
     <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/45"></div>
 
