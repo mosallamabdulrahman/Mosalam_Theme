@@ -26,7 +26,7 @@ if (empty($portfolio_title)) {
   <!-- ── Hero Banner ────────────────────────── -->
   <section class="relative min-h-[320px] md:min-h-[400px] flex items-center overflow-hidden bg-primary">
     <div class="absolute inset-0 z-0">
-      <img src="<?php echo esc_url(MOSALAM_THEME_URI . '/assets/images/abstract-high-tech-digital-background.webp'); ?>" alt="" class="w-full h-full object-cover opacity-30 mix-blend-overlay">
+      <img id="portfolio-hero-bg-img" src="<?php echo esc_url(MOSALAM_THEME_URI . '/assets/images/abstract-high-tech-digital-background.webp'); ?>" alt="" class="w-full h-full object-cover opacity-30 mix-blend-overlay transition-opacity duration-500 ease-in-out" loading="eager" fetchpriority="high">
       <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/40"></div>
     </div>
     <div class="relative z-10 container-custom py-12 md:py-16 w-full">
@@ -46,11 +46,16 @@ if (empty($portfolio_title)) {
 
   <!-- ── Filter & Search Section ───────────── -->
   <section class="container-custom pt-12" data-animate="fade-up" data-animate-delay="150">
-    <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 border-b border-outline-variant/30 pb-6 mb-10 w-full">
+    <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 border-b border-outline-variant/30 pb-6 mb-8 w-full">
       
       <!-- Category Tabs (Styled like Market Research Tabs) -->
       <div class="flex flex-wrap items-center gap-2" id="portfolio-tabs">
-        <button data-category="all" class="portfolio-tab-btn px-5 py-2.5 text-sm font-bold rounded-action border border-outline-variant/30 transition-all">
+        <button 
+          data-category="all" 
+          data-title="<?php esc_attr_e('All Projects', 'mosalam'); ?>"
+          data-hero-bg="<?php echo esc_url(MOSALAM_THEME_URI . '/assets/images/abstract-high-tech-digital-background.webp'); ?>"
+          class="portfolio-tab-btn px-5 py-2.5 text-sm font-bold rounded-action border border-outline-variant/30 transition-all"
+        >
           <?php esc_html_e('All', 'mosalam'); ?>
         </button>
         <?php
@@ -59,8 +64,18 @@ if (empty($portfolio_title)) {
             'hide_empty' => true,
         ]);
         if (!empty($terms) && !is_wp_error($terms)) :
-            foreach ($terms as $term) : ?>
-              <button data-category="<?php echo esc_attr($term->slug); ?>" class="portfolio-tab-btn px-5 py-2.5 text-sm font-bold rounded-action border border-outline-variant/30 transition-all">
+            foreach ($terms as $term) :
+                $custom_title = get_term_meta($term->term_id, '_mosalam_category_title', true);
+                $display_title = !empty($custom_title) ? $custom_title : $term->name;
+                $bg_id = get_term_meta($term->term_id, '_mosalam_category_hero_bg_id', true);
+                $hero_bg_url = $bg_id ? wp_get_attachment_image_url($bg_id, 'full') : MOSALAM_THEME_URI . '/assets/images/abstract-high-tech-digital-background.webp';
+                ?>
+              <button 
+                data-category="<?php echo esc_attr($term->slug); ?>" 
+                data-title="<?php echo esc_attr($display_title); ?>"
+                data-hero-bg="<?php echo esc_url($hero_bg_url); ?>"
+                class="portfolio-tab-btn px-5 py-2.5 text-sm font-bold rounded-action border border-outline-variant/30 transition-all"
+              >
                 <?php echo esc_html($term->name); ?>
               </button>
             <?php endforeach;
@@ -86,6 +101,13 @@ if (empty($portfolio_title)) {
     </div>
   </section>
 
+  <!-- ── Dynamic Category Title Section ─────── -->
+  <section class="container-custom pt-2 pb-6">
+    <h2 id="category-display-title" class="text-2xl sm:text-3xl md:text-4xl text-center font-headline font-bold text-primary tracking-tight transition-all duration-300 transform opacity-100 translate-y-0">
+      <?php esc_html_e('All Projects', 'mosalam'); ?>
+    </h2>
+  </section>
+
   <!-- ── Projects Grid ──────────────────────── -->
   <section class="container-custom pb-24">
     <?php
@@ -93,12 +115,14 @@ if (empty($portfolio_title)) {
         'post_type' => 'project',
         'post_status' => 'publish',
         'posts_per_page' => -1, // Get all to filter and paginated on client side
+        'orderby' => 'menu_order',
+        'order' => 'ASC',
     ]);
 
     if ($projects_query->have_posts()) :
     ?>
 
-      <div id="projects-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10" data-animate-group="fade-up">
+      <div id="projects-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4" data-animate-group="fade-up">
         <?php while ($projects_query->have_posts()) : $projects_query->the_post();
             $live_url = mosalam_get_project_live_url();
             $terms = wp_get_post_terms(get_the_ID(), 'project_category');
@@ -108,61 +132,40 @@ if (empty($portfolio_title)) {
                 $cat_slugs[] = $t->slug;
                 $cat_names[] = $t->name;
             }
-            $short_description = mosalam_get_project_short_description();
             ?>
 
-          <article 
-            class="project-card group relative flex flex-col bg-white rounded-action border border-outline-variant/20 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+          <a 
+            href="<?php echo esc_url($live_url); ?>" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="project-card group relative aspect-[3/2] bg-white rounded-action border border-outline-variant/20 shadow-sm hover:shadow-xl transition-all duration-300 flex items-center justify-center p-4 sm:p-5 overflow-hidden"
             data-categories='<?php echo json_encode($cat_slugs); ?>'
             data-title="<?php echo esc_attr(strtolower(get_the_title())); ?>"
             data-animate-item
           >
-            
-            <!-- Image Wrap: Covered image filling the card top nicely -->
-            <div class="w-full aspect-[16/10] overflow-hidden relative border-b border-outline-variant/10">
+            <!-- Logo Image inside card container -->
+            <div class="w-full h-full flex items-center justify-center relative z-0">
               <?php if (has_post_thumbnail()) : ?>
-                <?php the_post_thumbnail('large', [
-                    'class' => 'w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105',
-                    'loading' => 'eager', // Eager load for immediate visual fade-in
+                <?php the_post_thumbnail('medium_large', [
+                    'class' => 'max-w-full max-h-full object-contain w-auto h-auto transition-transform duration-500 group-hover:scale-105',
+                    'loading' => 'lazy',
+                    'alt' => sprintf(__('%s logo', 'mosalam'), get_the_title()),
                 ]); ?>
               <?php else : ?>
-                <div class="w-full h-full bg-gradient-to-br from-surface-container to-surface-dim flex items-center justify-center">
-                  <span class="text-5xl text-outline-variant/40">✦</span>
-                </div>
+                <span class="text-2xl text-outline-variant/40 font-headline font-bold uppercase"><?php the_title(); ?></span>
               <?php endif; ?>
             </div>
 
-            <!-- Card Body -->
-            <div class="flex flex-col flex-1 p-5 md:p-6">
-              <div class="flex items-start justify-between gap-4 mb-3">
-                <h3 class="text-h4 text-primary leading-tight">
-                  <?php the_title(); ?>
-                </h3>
-                <?php if (!empty($cat_names)) : ?>
-                  <span class="inline-block px-3 py-1 text-[10px] font-bold tracking-wider text-primary bg-white border border-outline-variant/30 rounded-full shadow-sm uppercase shrink-0">
-                    <?php echo esc_html(implode(', ', $cat_names)); ?>
-                  </span>
-                <?php endif; ?>
-              </div>
-
-              <?php if ($short_description) : ?>
-                <p class="text-body-sm text-on-surface-variant mb-4 flex-1"><?php echo esc_html($short_description); ?></p>
-              <?php endif; ?>
-
-              <?php if ($live_url) : ?>
-                <div class="pt-3 border-t border-outline-variant/20 mt-auto">
-                  <a href="<?php echo esc_url($live_url); ?>" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-overline text-secondary hover:text-primary transition-colors">
-                    <?php esc_html_e('Visit Website', 'mosalam'); ?>
-                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                      <path d="M15 3h6v6" />
-                      <path d="M10 14 21 3" />
-                    </svg>
-                  </a>
-                </div>
-              <?php endif; ?>
+            <!-- Hover overlay: fades in on hover -->
+            <div class="absolute inset-0 bg-[#001b35]/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center z-10">
+              <h3 class="text-white font-headline font-bold text-xs sm:text-sm tracking-wider mb-3 leading-snug">
+                <?php the_title(); ?>
+              </h3>
+              <span class="inline-flex items-center justify-center bg-secondary hover:bg-white hover:text-secondary text-white text-[11px] sm:text-xs font-bold px-4 py-1.5 sm:px-5 sm:py-2 rounded-full shadow transition-all duration-300 transform hover:scale-105">
+                <?php esc_html_e('View', 'mosalam'); ?>
+              </span>
             </div>
-          </article>
+          </a>
 
         <?php endwhile; ?>
       </div>
@@ -195,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let activeCategory = 'all';
   let searchQuery = '';
-  let visibleCount = 9;
+  let visibleCount = 24;
 
   // Set active tab buttons classes (Market Research Dashboard style)
   const updateTabButtonStyles = () => {
@@ -272,9 +275,35 @@ document.addEventListener('DOMContentLoaded', () => {
   tabBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       activeCategory = btn.dataset.category;
-      visibleCount = 9; // Reset paging on category change
+      visibleCount = 24; // Reset paging on category change
       updateTabButtonStyles();
       filterAndRender(false);
+
+      // Smoothly animate Category Title
+      const categoryTitleEl = document.getElementById('category-display-title');
+      const newTitle = btn.dataset.title;
+      if (categoryTitleEl && newTitle) {
+        categoryTitleEl.style.opacity = '0';
+        categoryTitleEl.style.transform = 'translateY(6px)';
+        setTimeout(() => {
+          categoryTitleEl.textContent = newTitle;
+          categoryTitleEl.style.opacity = '1';
+          categoryTitleEl.style.transform = 'translateY(0)';
+        }, 150);
+      }
+
+      // Smoothly animate Hero Background Image
+      const heroBgImgEl = document.getElementById('portfolio-hero-bg-img');
+      const newHeroBg = btn.dataset.heroBg;
+      if (heroBgImgEl && newHeroBg) {
+        if (heroBgImgEl.src !== newHeroBg) {
+          heroBgImgEl.style.opacity = '0';
+          setTimeout(() => {
+            heroBgImgEl.src = newHeroBg;
+            heroBgImgEl.style.opacity = '0.3';
+          }, 200);
+        }
+      }
     });
   });
 
@@ -282,7 +311,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (searchInput) {
     searchInput.addEventListener('input', (e) => {
       searchQuery = e.target.value.trim();
-      visibleCount = 9; // Reset paging on search change
+      visibleCount = 24; // Reset paging on search change
       filterAndRender(false);
     });
   }
@@ -290,7 +319,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Load more click handler
   if (loadMoreBtn) {
     loadMoreBtn.addEventListener('click', () => {
-      visibleCount += 9;
+      visibleCount += 24;
       filterAndRender(false);
     });
   }

@@ -284,7 +284,7 @@ function initMethodologyTabs() {
   const setActive = (index) => {
     tabButtons.forEach((button) => {
       const isActive = Number(button.dataset.stepIndex) === index;
-      button.classList.toggle("text-[#001b35]", isActive);
+      button.classList.toggle("text-primary", isActive);
       button.classList.toggle("text-on-surface-variant/50", !isActive);
       const underline = button.querySelector(".js-methodology-tab-underline");
       if (underline) underline.classList.toggle("hidden", !isActive);
@@ -389,20 +389,20 @@ function initHomeSideNav() {
   if (!nav) return;
 
   const items = Array.from(nav.querySelectorAll(".js-side-nav-item"));
-  const darkBarClass = ["bg-[#001b35]", "shadow-[0_0_12px_rgba(0,27,53,0.18)]"];
+  const darkBarClass = ["bg-primary", "shadow-[0_0_12px_rgba(0,27,53,0.18)]"];
   const lightBarClass = [
     "bg-white",
     "shadow-[0_0_12px_rgba(255,255,255,0.55)]",
   ];
   const darkLabelClass = [
     "text-white",
-    "bg-[#001b35]/90",
+    "bg-primary/90",
     "backdrop-blur-xl",
     "drop-shadow-[0_2px_10px_rgba(255,255,255,0.15)]",
   ];
   const lightLabelClass = [
     "text-white",
-    "bg-[#001b35]/80",
+    "bg-primary/80",
     "backdrop-blur-xl",
     "drop-shadow-[0_2px_10px_rgba(0,27,53,0.95)]",
   ];

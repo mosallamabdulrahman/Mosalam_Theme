@@ -20,11 +20,6 @@ function mosalam_register_block_category($categories)
     return array_merge(
         [
             [
-                'slug' => 'derwazamall',
-                'title' => 'derwazamall',
-                'icon' => null,
-            ],
-            [
                 'slug' => 'mosalam-blocks',
                 'title' => 'Mosalam_Blocks',
                 'icon' => null,

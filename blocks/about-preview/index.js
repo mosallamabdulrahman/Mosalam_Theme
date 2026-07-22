@@ -53,7 +53,7 @@ registerBlockType(metadata.name, {
               />
               <RichText
                 tagName="h2"
-                className="text-h2 text-[#001b35] mb-8"
+                className="text-h2 text-primary mb-8"
                 value={title}
                 onChange={(value) => setAttributes({ title: value })}
                 allowedFormats={[]}
@@ -76,8 +76,8 @@ registerBlockType(metadata.name, {
                 {stats.map((stat, index) => (
                   <div key={index} className="border-l-4 border-secondary pl-6">
                     <RichText
-                      tagName="h4"
-                      className="text-h1 text-[#001b35] mb-2"
+                      tagName="h3"
+                      className="text-h1 text-primary mb-2"
                       value={stat.value}
                       onChange={(value) => updateStat(index, "value", value)}
                       allowedFormats={[]}
@@ -115,7 +115,7 @@ registerBlockType(metadata.name, {
                 src={image}
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-[#001b35]/10 rounded-lg"></div>
+              <div className="absolute inset-0 bg-primary/10 rounded-lg"></div>
             </div>
           </div>
         </div>

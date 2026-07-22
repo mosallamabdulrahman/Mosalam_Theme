@@ -81,7 +81,7 @@ function mosalam_add_menu_link_class( $atts, $item, $args ) {
             }
         } elseif ( in_array( $args->theme_location, [ 'footer_explore', 'footer_compliance' ], true ) ) {
             // Footer Menu links
-            $atts['class'] = 'text-[#001b35]/60 hover:text-secondary hover:translate-x-2 transition-all duration-300 block text-[15px] font-body';
+            $atts['class'] = 'text-primary/60 hover:text-secondary hover:translate-x-2 transition-all duration-300 block text-[15px] font-body';
         }
     }
     return $atts;

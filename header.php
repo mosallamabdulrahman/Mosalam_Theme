@@ -19,7 +19,7 @@ $mosalam_mega_menu_columns = mosalam_get_mega_menu_columns();
 <body <?php body_class('bg-surface text-on-surface selection:bg-secondary/30 w-full relative'); ?>>
 <?php wp_body_open(); ?>
 
-<nav id="site-header" class="sticky top-0 w-full z-50 bg-[#001b35] border-b border-white/10 shadow-sm h-24 md:h-32">
+<nav id="site-header" class="sticky top-0 w-full z-50 bg-primary border-b border-white/10 shadow-sm h-24 md:h-32">
   <div class="flex justify-between items-center container-custom h-full">
     <div class="flex items-center gap-16">
       <div class="flex flex-col">
@@ -50,7 +50,7 @@ $mosalam_mega_menu_columns = mosalam_get_mega_menu_columns();
           id="search-form"
           action="<?php echo esc_url(home_url('/')); ?>"
           method="get"
-          class="hidden fixed left-4 right-4 top-28 z-[70] items-center rounded-action bg-[#001b35]/95 px-4 py-3 border border-white/20 backdrop-blur-md md:absolute md:left-auto md:right-0 md:top-[56px] md:w-[300px] md:bg-[#001b35] md:py-2.5 md:px-4 md:shadow-xl md:border md:border-white/15"
+          class="hidden fixed left-4 right-4 top-28 z-[70] items-center rounded-action bg-primary/95 px-4 py-3 border border-white/20 backdrop-blur-md md:absolute md:left-auto md:right-0 md:top-[56px] md:w-[300px] md:bg-primary md:py-2.5 md:px-4 md:shadow-xl md:border md:border-white/15"
         >
           <svg class="w-4 h-4 text-white/50 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
           <input
@@ -85,17 +85,17 @@ $mosalam_mega_menu_columns = mosalam_get_mega_menu_columns();
   <!-- Mega Menu Dropdown (Desktop) -->
   <div
     id="mega-menu-panel"
-    class="hidden absolute top-full left-0 w-full bg-white text-[#001b35] shadow-2xl overflow-hidden border-t border-black/5 z-[40]"
+    class="hidden absolute top-full left-0 w-full bg-white text-primary shadow-2xl overflow-hidden border-t border-black/5 z-[40]"
   >
     <div class="container-custom py-12 lg:py-16">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 max-w-3xl">
         <?php foreach ($mosalam_mega_menu_columns as $column) : ?>
           <div class="flex flex-col">
-            <h4 class="text-[14px] md:text-[15px] font-bold text-[#001b35] leading-tight mb-4 max-w-[200px]"><?php echo esc_html($column['title']); ?></h4>
+            <h4 class="text-[14px] md:text-[15px] font-bold text-primary leading-tight mb-4 max-w-[200px]"><?php echo esc_html($column['title']); ?></h4>
             <ul class="flex flex-col gap-2.5">
               <?php foreach ($column['links'] as $link) : ?>
                 <li>
-                  <a href="<?php echo esc_url($link['url']); ?>" class="text-[13px] md:text-[14px] font-english text-[#4d4d4d] hover:text-[#001b35] hover:underline transition-all block">
+                  <a href="<?php echo esc_url($link['url']); ?>" class="text-[13px] md:text-[14px] font-english text-[#4d4d4d] hover:text-primary hover:underline transition-all block">
                     <?php echo esc_html($link['name']); ?>
                   </a>
                 </li>
@@ -108,10 +108,10 @@ $mosalam_mega_menu_columns = mosalam_get_mega_menu_columns();
   </div>
 
   <!-- Mobile Menu Overlay -->
-  <div id="mobile-menu-panel" class="hidden fixed inset-y-0 right-0 w-full bg-[#001b35] z-[60] lg:hidden overflow-y-auto" style="transform: translateX(100%);">
+  <div id="mobile-menu-panel" class="hidden fixed inset-y-0 right-0 w-full bg-primary z-[60] lg:hidden overflow-y-auto" style="transform: translateX(100%);">
     <div class="flex flex-col px-8 py-10 md:py-16">
       <div class="flex justify-between items-center mb-12">
-        <img src="<?php echo esc_url($mosalam_logo); ?>" alt="MOSALAM Logo" class="h-8 w-auto px-10" referrerpolicy="no-referrer">
+        <img src="<?php echo esc_url($mosalam_logo); ?>" alt="MOSALAM Logo" class="h-8 w-auto px-10 brightness-0 invert" referrerpolicy="no-referrer">
         <button id="mobile-menu-close" type="button" class="p-2 text-white hover:bg-white/5 rounded-action">
           <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
         </button>
@@ -119,10 +119,6 @@ $mosalam_mega_menu_columns = mosalam_get_mega_menu_columns();
 
       <div class="flex flex-col gap-8 px-10">
         <div class="flex flex-col gap-4">
-          <!-- <button id="mobile-services-toggle" type="button" aria-expanded="false" class="text-h3 text-white text-left flex items-center justify-between">
-            Services
-            <svg id="mobile-services-chevron" class="w-6 h-6 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
-          </button> -->
           <div id="mobile-services-panel" class="hidden flex-col gap-6 pl-4 border-l border-white/10">
             <?php foreach ($mosalam_mega_menu_columns as $index => $column) : ?>
               <div class="flex flex-col gap-3">
@@ -149,7 +145,7 @@ $mosalam_mega_menu_columns = mosalam_get_mega_menu_columns();
         ]);
         ?>
 
-        <a href="<?php echo esc_url($mosalam_cta_url); ?>" class="mt-8 rounded-action bg-[#00f0b4] text-[#001b35] py-4 text-overline font-bold uppercase tracking-widest text-center">
+        <a href="<?php echo esc_url($mosalam_cta_url); ?>" class="mt-8 rounded-action bg-[#00f0b4] text-primary py-4 text-overline font-bold uppercase tracking-widest text-center">
           Contact Us Now
         </a>
       </div>

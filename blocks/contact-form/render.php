@@ -47,7 +47,7 @@ if ( ! function_exists( 'mosalam_contact_icon_paths' ) ) {
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><?php echo mosalam_contact_icon_paths($item['icon']); ?></svg>
             </div>
             <div>
-              <h4 class="text-h4 text-primary mb-2"><?php echo esc_html($item['title']); ?></h4>
+              <h3 class="text-h4 text-primary mb-2"><?php echo esc_html($item['title']); ?></h3>
               <?php foreach ($item['lines'] as $line) : ?>
                 <?php if (!empty($line['href'])) : ?>
                   <a href="<?php echo esc_url($line['href']); ?>" class="text-body text-secondary hover:text-primary transition-colors block"><?php echo esc_html($line['text']); ?></a>

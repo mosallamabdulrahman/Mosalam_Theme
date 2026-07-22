@@ -15,7 +15,7 @@ $results_count  = $wp_query->found_posts;
   <!-- ── Hero Banner ────────────────────────── -->
   <section class="relative bg-primary overflow-hidden animate-fade-in-up">
     <div class="absolute inset-0">
-      <img src="<?php echo esc_url( MOSALAM_THEME_URI . '/assets/images/blog_hero_bg.webp' ); ?>" alt="" class="w-full h-full object-cover opacity-35">
+      <img src="<?php echo esc_url( MOSALAM_THEME_URI . '/assets/images/blog_hero_bg.webp' ); ?>" alt="" class="w-full h-full object-cover opacity-35" loading="eager" fetchpriority="high">
     </div>
     <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/45"></div>
     <div class="relative container-custom py-14 md:py-18 text-center">
@@ -51,7 +51,7 @@ $results_count  = $wp_query->found_posts;
               <!-- Thumbnail -->
               <div class="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-surface-container to-surface-dim">
                 <!-- Result Type Badge -->
-                <span class="absolute top-4 left-4 z-10 text-[10px] font-bold uppercase tracking-wider bg-[#001b35] text-white px-2.5 py-1 rounded-full shadow-sm">
+                <span class="absolute top-4 left-4 z-10 text-[10px] font-bold uppercase tracking-wider bg-primary text-white px-2.5 py-1 rounded-full shadow-sm">
                   <?php esc_html_e( 'Article', 'mosalam' ); ?>
                 </span>
                 

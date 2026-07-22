@@ -14,10 +14,21 @@ $cards = $attributes['cards'] ?? [];
           <div class="p-6 md:p-8 lg:p-10 border border-white/20 hover:bg-white/5 transition-all <?php echo 2 === $index ? 'md:col-span-2 xl:col-span-1' : ''; ?>" data-animate-item>
             <h3 class="text-h3 mb-4"><?php echo esc_html($card['title']); ?></h3>
             <p class="text-white/70 text-body-sm mb-8"><?php echo wp_kses_post($card['description']); ?></p>
-            <button type="button" class="flex items-center gap-4 text-overline group">
+            <?php 
+            $cta_url = $card['ctaUrl'] ?? '';
+            if (empty($cta_url)) {
+                $cta_url = '#';
+            }
+            if (preg_match('~^(?:https?:)?//|^#|^mailto:|^tel:~i', $cta_url)) {
+                $final_url = $cta_url;
+            } else {
+                $final_url = home_url('/' . ltrim($cta_url, '/'));
+            }
+            ?>
+            <a href="<?php echo esc_url($final_url); ?>" class="flex items-center gap-4 text-overline group">
               <?php echo esc_html($card['ctaLabel']); ?>
               <svg class="w-4 h-4 group-hover:translate-x-2 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
-            </button>
+            </a>
           </div>
         <?php endforeach; ?>
       </div>

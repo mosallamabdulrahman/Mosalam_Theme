@@ -73,7 +73,7 @@ registerBlockType(metadata.name, {
             />
             <RichText
               tagName="h2"
-              className="text-h2 text-[#001b35] mb-8"
+              className="text-h2 text-primary mb-8"
               value={title}
               onChange={(value) => setAttributes({ title: value })}
               allowedFormats={[]}
@@ -96,8 +96,8 @@ registerBlockType(metadata.name, {
                   onClick={() => setActiveTab(index)}
                   className={`min-w-[180px] md:min-w-[200px] flex-1 text-center pb-4 text-h4 transition-all duration-300 relative ${
                     activeTab === index
-                      ? "text-[#001b35]"
-                      : "text-on-surface-variant/50 hover:text-[#001b35]/70"
+                      ? "text-primary"
+                      : "text-on-surface-variant/50 hover:text-primary/70"
                   }`}
                 >
                   <span className="text-secondary mr-2 text-sm align-top">
@@ -120,7 +120,7 @@ registerBlockType(metadata.name, {
                 </span>
                 <RichText
                   tagName="h3"
-                  className="text-h2 text-[#001b35] mb-6"
+                  className="text-h2 text-primary mb-6"
                   value={active.title}
                   onChange={(value) => updateStep(activeTab, "title", value)}
                   allowedFormats={[]}
@@ -151,7 +151,7 @@ registerBlockType(metadata.name, {
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-[#001b35]/10 mix-blend-multiply"></div>
+                <div className="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
               </div>
             </div>
           </div>

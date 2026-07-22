@@ -42,6 +42,16 @@ registerBlockType(metadata.name, {
                     <RichText tagName="span" value={card.ctaLabel} onChange={(value) => updateCard(index, 'ctaLabel', value)} allowedFormats={[]} />
                     <ArrowRight />
                   </span>
+                  <div className="mt-4 pt-4 border-t border-white/10 flex flex-col gap-1.5 text-xs text-white/50">
+                    <label className="font-bold uppercase tracking-wider text-[9px]">Button URL:</label>
+                    <input 
+                      type="text" 
+                      value={card.ctaUrl || ''} 
+                      placeholder="e.g. /about" 
+                      onChange={(e) => updateCard(index, 'ctaUrl', e.target.value)} 
+                      className="bg-white/10 border border-white/20 text-white rounded px-2 py-1 text-xs focus:outline-none focus:border-white focus:bg-white/20 w-full"
+                    />
+                  </div>
                 </div>
               ))}
             </div>

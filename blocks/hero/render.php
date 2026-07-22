@@ -15,7 +15,7 @@ $scroll_label = $attributes['scrollLabel'] ?? '';
 <section id="hero" class="w-full h-[600px] relative flex flex-col">
   <div class="flex-grow relative flex items-center w-full overflow-hidden">
     <div class="cinematic-bg absolute inset-0">
-      <img class="w-full h-full object-cover" alt="abstract high-tech digital background" src="<?php echo esc_url($background_image); ?>" referrerpolicy="no-referrer">
+      <img class="w-full h-full object-cover" alt="abstract high-tech digital background" src="<?php echo esc_url($background_image); ?>" referrerpolicy="no-referrer" loading="eager" fetchpriority="high">
       <div class="absolute inset-0 bg-black/40"></div>
     </div>
     <div class="cinematic-content container-custom py-6 md:py-12">

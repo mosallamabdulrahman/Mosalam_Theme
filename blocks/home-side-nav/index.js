@@ -51,7 +51,7 @@ registerBlockType(metadata.name, {
         <ul className="flex flex-col gap-4">
           {items.map((item, index) => (
             <li key={index} className="border border-black/10 rounded p-2">
-              <div className="h-[3px] w-10 bg-[#001b35] mb-2" />
+              <div className="h-[3px] w-10 bg-primary mb-2" />
               <RichText
                 tagName="span"
                 className="text-[11px] font-bold block mb-1"

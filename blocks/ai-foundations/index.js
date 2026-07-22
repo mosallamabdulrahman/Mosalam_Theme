@@ -68,7 +68,7 @@ registerBlockType(metadata.name, {
               src={backgroundImage}
               referrerPolicy="no-referrer"
             />
-            <div className="absolute inset-0 bg-[#001b35]/90"></div>
+            <div className="absolute inset-0 bg-primary/90"></div>
           </div>
           <div className="cinematic-content container-custom w-full">
             <div className="max-w-3xl">
@@ -98,7 +98,7 @@ registerBlockType(metadata.name, {
                   {features.map((feature, index) => (
                     <div key={index} className="border-l border-white/20 pl-8">
                       <RichText
-                        tagName="h4"
+                        tagName="h3"
                         className="text-h4 mb-4"
                         value={feature.title}
                         onChange={(value) =>

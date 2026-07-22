@@ -136,7 +136,7 @@ registerBlockType(metadata.name, {
                   </div>
                   <div className="flex-1">
                     <RichText
-                      tagName="h4"
+                      tagName="h3"
                       className="text-h4 text-primary mb-2"
                       value={item.title}
                       onChange={(value) => updateItem(index, "title", value)}

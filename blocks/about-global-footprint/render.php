@@ -30,7 +30,7 @@ $badge_text = $attributes['badgeText'] ?? '';
     </div>
     <div class="relative" data-animate="fade-left">
       <div class="aspect-square bg-primary_container border border-white/10 relative group overflow-hidden shadow-2xl">
-        <img class="w-full h-full object-cover opacity-60 mix-blend-luminosity" alt="Dark stylized technical map" src="<?php echo esc_url($map_image); ?>" referrerpolicy="no-referrer">
+        <img class="w-full h-full object-cover opacity-60 mix-blend-luminosity" alt="Dark stylized technical map" src="<?php echo esc_url($map_image); ?>" referrerpolicy="no-referrer" loading="lazy">
         <div class="absolute inset-0 flex items-center justify-center p-8">
           <div class="w-full max-w-sm bg-surface p-8 shadow-2xl relative">
             <div class="mb-6">

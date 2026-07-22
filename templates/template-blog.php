@@ -27,7 +27,7 @@ if ( empty( $archive_title ) ) {
   <!-- ── Hero Banner ────────────────────────── -->
   <section class="relative bg-primary overflow-hidden">
     <div class="absolute inset-0">
-      <img src="<?php echo esc_url( MOSALAM_THEME_URI . '/assets/images/blog_hero_bg.webp' ); ?>" alt="" class="w-full h-full object-cover opacity-35">
+      <img src="<?php echo esc_url( MOSALAM_THEME_URI . '/assets/images/blog_hero_bg.webp' ); ?>" alt="" class="w-full h-full object-cover opacity-35" loading="eager" fetchpriority="high">
     </div>
     <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/45"></div>
     <div class="relative container-custom py-20 md:py-28 text-center" data-animate-group="fade-up">

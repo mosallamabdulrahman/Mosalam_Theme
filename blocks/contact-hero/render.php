@@ -9,7 +9,7 @@ $background_image = $attributes['backgroundImage'] ?? '';
 ?>
 <section class="relative h-[450px] flex items-center overflow-hidden bg-primary">
   <div class="absolute inset-0 z-0">
-    <img class="w-full h-full object-cover opacity-30 mix-blend-overlay" alt="High-end architectural office interior" src="<?php echo esc_url($background_image); ?>" referrerpolicy="no-referrer">
+    <img class="w-full h-full object-cover opacity-30 mix-blend-overlay" alt="High-end architectural office interior" src="<?php echo esc_url($background_image); ?>" referrerpolicy="no-referrer" loading="eager" fetchpriority="high">
     <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/40"></div>
   </div>
   <div class="relative z-10 container-custom w-full py-10 md:py-16">

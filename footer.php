@@ -47,28 +47,32 @@ $mosalam_contact_items = [
     [
         'icon' => '<path d="M20 10c0 4.9-8 12-8 12S4 14.9 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="3" />',
         'text' => get_theme_mod('mosalam_contact_address', '4th Floor, Silverstream House 45 Fitzroy Street, Fitzrovia London'),
+        'type' => 'address',
     ],
     [
         'icon' => '<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7A2 2 0 0 1 22 16.9Z" />',
         'text' => get_theme_mod('mosalam_contact_phone_london', '+44 731 008 2737'),
         'label' => 'London Office',
+        'type' => 'phone',
     ],
     [
         'icon' => '<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7A2 2 0 0 1 22 16.9Z" />',
         'text' => get_theme_mod('mosalam_contact_phone_cairo', '+20 10 076 69160'),
         'label' => 'Cairo Office',
+        'type' => 'phone',
     ],
     [
         'icon' => '<rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-10 6L2 7" />',
         'text' => get_theme_mod('mosalam_contact_email', 'info@mosalam.com'),
+        'type' => 'email',
     ],
 ];
 ?>
 <footer id="footer" class="bg-[#fcf9f8] border-t border-[#001b35]/10 w-full">
-  <div class="container-custom grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-y-16 lg:gap-x-12 mb-20 text-[#001b35] pt-12" data-animate="fade-up">
+  <div class="container-custom grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-y-16 lg:gap-x-12 mb-20 text-primary pt-12" data-animate="fade-up">
     <div class="lg:col-span-4 space-y-8">
-      <img src="<?php echo esc_url($mosalam_footer_logo); ?>" alt="MOSALAM Logo" class="h-10 w-auto" referrerpolicy="no-referrer">
-      <p class="text-[#001b35]/70 text-body font-body leading-relaxed max-w-xs"><?php echo esc_html($mosalam_footer_description); ?></p>
+      <img src="<?php echo esc_url($mosalam_footer_logo); ?>" alt="MOSALAM Logo" class="h-10 w-auto" referrerpolicy="no-referrer" loading="lazy">
+      <p class="text-primary/70 text-body font-body leading-relaxed max-w-xs"><?php echo esc_html($mosalam_footer_description); ?></p>
       <div class="flex gap-6 items-center">
         <?php foreach ($mosalam_social_links as $social) : ?>
           <a
@@ -80,7 +84,7 @@ $mosalam_contact_items = [
             style="--social-color: <?php echo esc_attr($social['color']); ?>; --social-soft-color: <?php echo esc_attr($social['soft_color']); ?>;"
           >
             <div class="w-10 h-10 rounded-full border border-[#001b35]/10 flex items-center justify-center transition-all duration-300 group-hover:-translate-y-1 group-hover:border-[var(--social-color)] group-hover:bg-[var(--social-soft-color)]">
-              <svg class="w-5 h-5 text-[#001b35]/60 transition-colors duration-300 group-hover:text-[var(--social-color)]" viewBox="<?php echo esc_attr($social['viewbox'] ?? '0 0 24 24'); ?>" fill="currentColor" aria-hidden="true"><?php echo $social['icon']; ?></svg>
+              <svg class="w-5 h-5 text-primary/60 transition-colors duration-300 group-hover:text-[var(--social-color)]" viewBox="<?php echo esc_attr($social['viewbox'] ?? '0 0 24 24'); ?>" fill="currentColor" aria-hidden="true"><?php echo $social['icon']; ?></svg>
             </div>
           </a>
         <?php endforeach; ?>
@@ -89,7 +93,7 @@ $mosalam_contact_items = [
 
     <div class="lg:col-span-4 grid grid-cols-1 sm:grid-cols-2 gap-12 lg:gap-8">
       <div class="space-y-8">
-        <h4 class="text-[#001b35] font-bold tracking-[0.1em] text-[15px] uppercase">Explore</h4>
+        <h4 class="text-primary font-bold tracking-[0.1em] text-[15px] uppercase">Explore</h4>
         <?php
         wp_nav_menu([
             'theme_location' => 'footer_explore',
@@ -100,7 +104,7 @@ $mosalam_contact_items = [
         ?>
       </div>
       <div class="space-y-8">
-        <h4 class="text-[#001b35] font-bold tracking-[0.1em] text-[15px] uppercase">Compliance</h4>
+        <h4 class="text-primary font-bold tracking-[0.1em] text-[15px] uppercase">Compliance</h4>
         <?php
         wp_nav_menu([
             'theme_location' => 'footer_compliance',
@@ -113,20 +117,38 @@ $mosalam_contact_items = [
     </div>
 
     <div class="lg:col-span-4 space-y-8">
-      <h4 class="text-[#001b35] font-bold tracking-[0.1em] text-[15px] uppercase">Contact us</h4>
+      <h4 class="text-primary font-bold tracking-[0.1em] text-[15px] uppercase">Contact us</h4>
       <div class="space-y-6">
-        <?php foreach ($mosalam_contact_items as $item) : ?>
+        <?php foreach ($mosalam_contact_items as $item) : 
+          $type = $item['type'] ?? '';
+          $text = $item['text'];
+          $href = '';
+          if ($type === 'phone') {
+              $clean_phone = preg_replace('/[^\d+]/', '', $text);
+              $href = 'tel:' . $clean_phone;
+          } elseif ($type === 'email') {
+              $href = 'mailto:' . antispambot($text);
+          }
+        ?>
           <div class="flex gap-4 group <?php echo !empty($item['label']) ? 'items-center' : 'items-start'; ?>">
-            <div class="w-10 h-10 rounded-lg bg-[#001b35]/5 flex items-center justify-center shrink-0 group-hover:bg-secondary/10 transition-colors">
+            <div class="w-10 h-10 rounded-lg bg-primary/5 flex items-center justify-center shrink-0 group-hover:bg-secondary/10 transition-colors">
               <svg class="w-5 h-5 text-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><?php echo $item['icon']; ?></svg>
             </div>
             <?php if (!empty($item['label'])) : ?>
               <div class="flex flex-col">
-                <p class="text-[#001b35]/70 text-[15px] font-body group-hover:text-[#001b35] transition-colors"><?php echo esc_html($item['text']); ?></p>
-                <p class="text-[#001b35]/40 text-[12px] uppercase font-bold tracking-wider"><?php echo esc_html($item['label']); ?></p>
+                <?php if ($href) : ?>
+                  <a href="<?php echo esc_url($href); ?>" class="text-primary/70 text-[15px] font-body group-hover:text-secondary transition-colors hover:text-secondary focus:text-secondary"><?php echo esc_html($text); ?></a>
+                <?php else : ?>
+                  <p class="text-primary/70 text-[15px] font-body"><?php echo esc_html($text); ?></p>
+                <?php endif; ?>
+                <p class="text-primary/40 text-[12px] uppercase font-bold tracking-wider"><?php echo esc_html($item['label']); ?></p>
               </div>
             <?php else : ?>
-              <p class="text-[#001b35]/70 text-[15px] leading-relaxed font-body group-hover:text-[#001b35] transition-colors break-words"><?php echo esc_html($item['text']); ?></p>
+              <?php if ($href) : ?>
+                <a href="<?php echo esc_url($href); ?>" class="text-primary/70 text-[15px] leading-relaxed font-body group-hover:text-secondary transition-colors hover:text-secondary focus:text-secondary break-words"><?php echo esc_html($text); ?></a>
+              <?php else : ?>
+                <p class="text-primary/70 text-[15px] leading-relaxed font-body break-words"><?php echo esc_html($text); ?></p>
+              <?php endif; ?>
             <?php endif; ?>
           </div>
         <?php endforeach; ?>
@@ -135,11 +157,11 @@ $mosalam_contact_items = [
   </div>
 
   <div class="container-custom py-8 border-t border-[#001b35]/10 flex flex-col md:flex-row justify-between items-center gap-6">
-    <p class="text-[#001b35]/80 text-[12px] font-bold tracking-widest uppercase text-center md:text-left"><?php echo esc_html(get_theme_mod('mosalam_copyright', '© 2024 MOSALAM DIGITAL HORIZON. ALL RIGHTS RESERVED.')); ?></p>
+    <p class="text-primary/80 text-[12px] font-bold tracking-widest uppercase text-center md:text-left"><?php echo esc_html(get_theme_mod('mosalam_copyright', '© 2024 MOSALAM DIGITAL HORIZON. ALL RIGHTS RESERVED.')); ?></p>
     <div class="flex items-center gap-8">
-      <div class="flex gap-4 text-[11px] font-bold tracking-[0.1em] text-[#001b35]/80 uppercase">
+      <div class="flex gap-4 text-[11px] font-bold tracking-[0.1em] text-primary/80 uppercase">
         <?php foreach ($mosalam_offices as $office) : ?>
-          <span class="flex items-center gap-2 px-3 py-1 rounded-full bg-[#001b35]/5 border border-[#001b35]/10"><?php echo esc_html($office); ?></span>
+          <span class="flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 border border-[#001b35]/10"><?php echo esc_html($office); ?></span>
         <?php endforeach; ?>
       </div>
     </div>

@@ -13,8 +13,8 @@ $features = $attributes['features'] ?? [];
 ?>
 <section id="ai" class="min-h-screen w-full relative cinematic-section text-white py-10 md:py-16">
   <div class="cinematic-bg">
-    <img class="w-full h-full object-cover" alt="digital matrix background" src="<?php echo esc_url($background_image); ?>" referrerpolicy="no-referrer">
-    <div class="absolute inset-0 bg-[#001b35]/90"></div>
+    <img class="w-full h-full object-cover" alt="digital matrix background" src="<?php echo esc_url($background_image); ?>" referrerpolicy="no-referrer" loading="lazy">
+    <div class="absolute inset-0 bg-primary/90"></div>
   </div>
   <div class="cinematic-content container-custom w-full">
     <div class="max-w-3xl" data-animate="fade-up">
@@ -25,7 +25,7 @@ $features = $attributes['features'] ?? [];
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12" data-animate-group="fade-up">
           <?php foreach ($features as $feature) : ?>
             <div class="border-l border-white/20 pl-8" data-animate-item>
-              <h4 class="text-h4 mb-4"><?php echo esc_html($feature['title']); ?></h4>
+              <h3 class="text-h4 mb-4"><?php echo esc_html($feature['title']); ?></h3>
               <p class="text-body-sm text-white/50"><?php echo wp_kses_post($feature['description']); ?></p>
             </div>
           <?php endforeach; ?>

@@ -41,7 +41,7 @@ registerBlockType(metadata.name, {
     const { eyebrow, title, categories } = attributes;
     const blockProps = useBlockProps({
       className:
-        "min-h-screen w-full relative cinematic-section bg-[#001b35] py-10 md:py-16",
+        "min-h-screen w-full relative cinematic-section bg-primary py-10 md:py-16",
     });
 
     const updateCategory = (index, key, value) => {
@@ -121,7 +121,7 @@ registerBlockType(metadata.name, {
               >
                 <RichText
                   tagName="h3"
-                  className="text-h3 text-[#001b35] mb-4"
+                  className="text-h3 text-primary mb-4"
                   value={category.title}
                   onChange={(value) => updateCategory(catIndex, "title", value)}
                   allowedFormats={[]}

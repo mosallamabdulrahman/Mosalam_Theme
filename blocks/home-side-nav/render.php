@@ -13,11 +13,11 @@ $items = $attributes['items'] ?? [];
         $is_active = 0 === $index;
         $is_dark = 'light' === $item['tone'];
         $bar_tone_class = $is_dark
-            ? 'bg-[#001b35] shadow-[0_0_12px_rgba(0,27,53,0.18)]'
+            ? 'bg-primary shadow-[0_0_12px_rgba(0,27,53,0.18)]'
             : 'bg-white shadow-[0_0_12px_rgba(255,255,255,0.55)]';
         $label_tone_class = $is_dark
-            ? 'text-white bg-[#001b35]/90 backdrop-blur-xl drop-shadow-[0_2px_10px_rgba(255,255,255,0.15)]'
-            : 'text-white bg-[#001b35]/80 backdrop-blur-xl drop-shadow-[0_2px_10px_rgba(0,27,53,0.95)]';
+            ? 'text-white bg-primary/90 backdrop-blur-xl drop-shadow-[0_2px_10px_rgba(255,255,255,0.15)]'
+            : 'text-white bg-primary/80 backdrop-blur-xl drop-shadow-[0_2px_10px_rgba(0,27,53,0.95)]';
         ?>
       <li
         class="js-side-nav-item group relative flex flex-col transition-all duration-500 <?php echo $is_active ? 'mb-16 mt-4' : 'mb-12'; ?>"

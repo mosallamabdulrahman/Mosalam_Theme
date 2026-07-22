@@ -15,7 +15,7 @@ get_header();
     <!-- Hero Banner -->
     <section class="relative bg-primary overflow-hidden">
         <div class="absolute inset-0">
-            <img src="<?php echo esc_url( MOSALAM_THEME_URI . '/assets/images/blog_hero_bg.webp' ); ?>" alt="" class="w-full h-full object-cover opacity-35">
+            <img src="<?php echo esc_url( MOSALAM_THEME_URI . '/assets/images/blog_hero_bg.webp' ); ?>" alt="" class="w-full h-full object-cover opacity-35" loading="eager" fetchpriority="high">
         </div>
         <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/45"></div>
         <div class="relative container-custom py-16 md:py-20 text-center" data-animate-group="fade-up">
@@ -100,7 +100,7 @@ get_header();
                 <div class="card p-6 border-t-4 border-[#001b35]">
                     <div class="flex justify-between items-center mb-4">
                         <h3 class="text-2xl font-bold text-primary font-headline">Contabo</h3>
-                        <span class="bg-[#001b35]/5 text-primary px-3 py-1 rounded-full text-xs font-bold">The Raw Spec Giant</span>
+                        <span class="bg-primary/5 text-primary px-3 py-1 rounded-full text-xs font-bold">The Raw Spec Giant</span>
                     </div>
                     <div class="space-y-4">
                         <div>

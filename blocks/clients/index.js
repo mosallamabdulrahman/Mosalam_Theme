@@ -51,7 +51,7 @@ registerBlockType(metadata.name, {
             />
             <RichText
               tagName="h2"
-              className="text-h2 text-[#001b35]"
+              className="text-h2 text-primary"
               value={title}
               onChange={(value) => setAttributes({ title: value })}
               allowedFormats={[]}
@@ -62,7 +62,7 @@ registerBlockType(metadata.name, {
               <div key={index} className="relative group">
                 <RichText
                   tagName="div"
-                  className="text-2xl font-bold font-mono text-[#001b35]"
+                  className="text-2xl font-bold font-mono text-primary"
                   value={client}
                   onChange={(value) => updateClient(index, value)}
                   allowedFormats={[]}

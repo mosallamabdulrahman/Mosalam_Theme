@@ -22,7 +22,7 @@ $members = $attributes['members'] ?? [];
                 $image_url = MOSALAM_THEME_URI . '/' . $image_url;
             }
             ?>
-            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 grayscale group-hover:grayscale-0" alt="<?php echo esc_attr($member['name']); ?>" src="<?php echo esc_url($image_url); ?>" referrerpolicy="no-referrer">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 grayscale group-hover:grayscale-0" alt="<?php echo esc_attr($member['name']); ?>" src="<?php echo esc_url($image_url); ?>" referrerpolicy="no-referrer" loading="lazy">
             <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity mix-blend-overlay"></div>
           </div>
           <div class="p-6">

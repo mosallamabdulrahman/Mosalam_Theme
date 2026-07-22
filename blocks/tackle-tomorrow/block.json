@@ -20,17 +20,20 @@
         {
           "title": "The Mosalam Advantage",
           "description": "Proprietary framework for accelerated digital ROI and risk mitigation.",
-          "ctaLabel": "Explore"
+          "ctaLabel": "Explore",
+          "ctaUrl": "/about"
         },
         {
           "title": "Mosalam Consultancy",
           "description": "Advisory services for CXOs navigating ESG, FinOps, and digital horizons.",
-          "ctaLabel": "Explore"
+          "ctaLabel": "Explore",
+          "ctaUrl": "/portfolio"
         },
         {
           "title": "Join the Architects",
           "description": "Join a team of elite architects redefining the IT landscape innovation.",
-          "ctaLabel": "Explore"
+          "ctaLabel": "Explore",
+          "ctaUrl": "/contact"
         }
       ]
     },
